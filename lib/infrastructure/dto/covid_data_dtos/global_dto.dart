@@ -1,3 +1,4 @@
+import 'package:flutter_project/domain/models/global.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'global_dto.freezed.dart';
@@ -15,5 +16,20 @@ class GlobalDto with _$GlobalDto {
     @JsonKey(name: 'Date') String? date,
   }) = _GlobalDto;
 
-  factory GlobalDto.fromJson(Map<String, dynamic> json) => _$GlobalDtoFromJson(json);
+  // factory GlobalDto.fromDomain(Global global) {
+  //   return GlobalDto(
+  //     newConfirmed: global
+  //   );
+  // }
+
+  // Global toDomain() {
+  //   return Global(
+  //       totalDeath: totalDeaths!,
+  //       confirmed: totalConfirmed!,
+  //       totalRecovered: totalRecovered!,
+  //       newCases: newConfirmed!);
+  // }
+
+  factory GlobalDto.fromJson(Map<String, dynamic> json) =>
+      _$GlobalDtoFromJson(json);
 }
