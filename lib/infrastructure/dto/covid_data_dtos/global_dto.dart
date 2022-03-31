@@ -1,11 +1,11 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-part 'global.freezed.dart';
-part 'global.g.dart';
+part 'global_dto.freezed.dart';
+part 'global_dto.g.dart';
 
 @freezed
-class Global with _$Global {
-  factory Global({
+class GlobalDto with _$GlobalDto {
+  factory GlobalDto({
     @JsonKey(name: 'NewConfirmed') int? newConfirmed,
     @JsonKey(name: 'TotalConfirmed') int? totalConfirmed,
     @JsonKey(name: 'NewDeaths') int? newDeaths,
@@ -13,7 +13,7 @@ class Global with _$Global {
     @JsonKey(name: 'NewRecovered') int? newRecovered,
     @JsonKey(name: 'TotalRecovered') int? totalRecovered,
     @JsonKey(name: 'Date') String? date,
-  }) = _Global;
+  }) = _GlobalDto;
 
-  factory Global.fromJson(Map<String, dynamic> json) => _$GlobalFromJson(json);
+  factory GlobalDto.fromJson(Map<String, dynamic> json) => _$GlobalDtoFromJson(json);
 }

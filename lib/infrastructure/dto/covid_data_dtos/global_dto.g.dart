@@ -1,12 +1,12 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'global.dart';
+part of 'global_dto.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Global _$$_GlobalFromJson(Map<String, dynamic> json) => _$_Global(
+_$_GlobalDto _$$_GlobalDtoFromJson(Map<String, dynamic> json) => _$_GlobalDto(
       newConfirmed: json['NewConfirmed'] as int?,
       totalConfirmed: json['TotalConfirmed'] as int?,
       newDeaths: json['NewDeaths'] as int?,
@@ -16,7 +16,8 @@ _$_Global _$$_GlobalFromJson(Map<String, dynamic> json) => _$_Global(
       date: json['Date'] as String?,
     );
 
-Map<String, dynamic> _$$_GlobalToJson(_$_Global instance) => <String, dynamic>{
+Map<String, dynamic> _$$_GlobalDtoToJson(_$_GlobalDto instance) =>
+    <String, dynamic>{
       'NewConfirmed': instance.newConfirmed,
       'TotalConfirmed': instance.totalConfirmed,
       'NewDeaths': instance.newDeaths,

@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
-part of 'global.dart';
+part of 'country_dto.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -14,23 +14,32 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
-Global _$GlobalFromJson(Map<String, dynamic> json) {
-  return _Global.fromJson(json);
+CountryDto _$CountryDtoFromJson(Map<String, dynamic> json) {
+  return _CountryDto.fromJson(json);
 }
 
 /// @nodoc
-class _$GlobalTearOff {
-  const _$GlobalTearOff();
+class _$CountryDtoTearOff {
+  const _$CountryDtoTearOff();
 
-  _Global call(
-      {@JsonKey(name: 'NewConfirmed') int? newConfirmed,
+  _CountryDto call(
+      {@JsonKey(name: 'ID') String? id,
+      @JsonKey(name: 'Country') String? country,
+      @JsonKey(name: 'CountryCode') String? countryCode,
+      @JsonKey(name: 'Slug') String? slug,
+      @JsonKey(name: 'NewConfirmed') int? newConfirmed,
       @JsonKey(name: 'TotalConfirmed') int? totalConfirmed,
       @JsonKey(name: 'NewDeaths') int? newDeaths,
       @JsonKey(name: 'TotalDeaths') int? totalDeaths,
       @JsonKey(name: 'NewRecovered') int? newRecovered,
       @JsonKey(name: 'TotalRecovered') int? totalRecovered,
-      @JsonKey(name: 'Date') String? date}) {
-    return _Global(
+      @JsonKey(name: 'Date') String? date,
+      @JsonKey(name: 'Premium') PremiumDto? premium}) {
+    return _CountryDto(
+      id: id,
+      country: country,
+      countryCode: countryCode,
+      slug: slug,
       newConfirmed: newConfirmed,
       totalConfirmed: totalConfirmed,
       newDeaths: newDeaths,
@@ -38,19 +47,28 @@ class _$GlobalTearOff {
       newRecovered: newRecovered,
       totalRecovered: totalRecovered,
       date: date,
+      premium: premium,
     );
   }
 
-  Global fromJson(Map<String, Object?> json) {
-    return Global.fromJson(json);
+  CountryDto fromJson(Map<String, Object?> json) {
+    return CountryDto.fromJson(json);
   }
 }
 
 /// @nodoc
-const $Global = _$GlobalTearOff();
+const $CountryDto = _$CountryDtoTearOff();
 
 /// @nodoc
-mixin _$Global {
+mixin _$CountryDto {
+  @JsonKey(name: 'ID')
+  String? get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'Country')
+  String? get country => throw _privateConstructorUsedError;
+  @JsonKey(name: 'CountryCode')
+  String? get countryCode => throw _privateConstructorUsedError;
+  @JsonKey(name: 'Slug')
+  String? get slug => throw _privateConstructorUsedError;
   @JsonKey(name: 'NewConfirmed')
   int? get newConfirmed => throw _privateConstructorUsedError;
   @JsonKey(name: 'TotalConfirmed')
@@ -65,36 +83,49 @@ mixin _$Global {
   int? get totalRecovered => throw _privateConstructorUsedError;
   @JsonKey(name: 'Date')
   String? get date => throw _privateConstructorUsedError;
+  @JsonKey(name: 'Premium')
+  PremiumDto? get premium => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $GlobalCopyWith<Global> get copyWith => throw _privateConstructorUsedError;
+  $CountryDtoCopyWith<CountryDto> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $GlobalCopyWith<$Res> {
-  factory $GlobalCopyWith(Global value, $Res Function(Global) then) =
-      _$GlobalCopyWithImpl<$Res>;
+abstract class $CountryDtoCopyWith<$Res> {
+  factory $CountryDtoCopyWith(
+          CountryDto value, $Res Function(CountryDto) then) =
+      _$CountryDtoCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(name: 'NewConfirmed') int? newConfirmed,
+      {@JsonKey(name: 'ID') String? id,
+      @JsonKey(name: 'Country') String? country,
+      @JsonKey(name: 'CountryCode') String? countryCode,
+      @JsonKey(name: 'Slug') String? slug,
+      @JsonKey(name: 'NewConfirmed') int? newConfirmed,
       @JsonKey(name: 'TotalConfirmed') int? totalConfirmed,
       @JsonKey(name: 'NewDeaths') int? newDeaths,
       @JsonKey(name: 'TotalDeaths') int? totalDeaths,
       @JsonKey(name: 'NewRecovered') int? newRecovered,
       @JsonKey(name: 'TotalRecovered') int? totalRecovered,
-      @JsonKey(name: 'Date') String? date});
+      @JsonKey(name: 'Date') String? date,
+      @JsonKey(name: 'Premium') PremiumDto? premium});
 }
 
 /// @nodoc
-class _$GlobalCopyWithImpl<$Res> implements $GlobalCopyWith<$Res> {
-  _$GlobalCopyWithImpl(this._value, this._then);
+class _$CountryDtoCopyWithImpl<$Res> implements $CountryDtoCopyWith<$Res> {
+  _$CountryDtoCopyWithImpl(this._value, this._then);
 
-  final Global _value;
+  final CountryDto _value;
   // ignore: unused_field
-  final $Res Function(Global) _then;
+  final $Res Function(CountryDto) _then;
 
   @override
   $Res call({
+    Object? id = freezed,
+    Object? country = freezed,
+    Object? countryCode = freezed,
+    Object? slug = freezed,
     Object? newConfirmed = freezed,
     Object? totalConfirmed = freezed,
     Object? newDeaths = freezed,
@@ -102,8 +133,25 @@ class _$GlobalCopyWithImpl<$Res> implements $GlobalCopyWith<$Res> {
     Object? newRecovered = freezed,
     Object? totalRecovered = freezed,
     Object? date = freezed,
+    Object? premium = freezed,
   }) {
     return _then(_value.copyWith(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      country: country == freezed
+          ? _value.country
+          : country // ignore: cast_nullable_to_non_nullable
+              as String?,
+      countryCode: countryCode == freezed
+          ? _value.countryCode
+          : countryCode // ignore: cast_nullable_to_non_nullable
+              as String?,
+      slug: slug == freezed
+          ? _value.slug
+          : slug // ignore: cast_nullable_to_non_nullable
+              as String?,
       newConfirmed: newConfirmed == freezed
           ? _value.newConfirmed
           : newConfirmed // ignore: cast_nullable_to_non_nullable
@@ -132,36 +180,51 @@ class _$GlobalCopyWithImpl<$Res> implements $GlobalCopyWith<$Res> {
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
               as String?,
+      premium: premium == freezed
+          ? _value.premium
+          : premium // ignore: cast_nullable_to_non_nullable
+              as PremiumDto?,
     ));
   }
 }
 
 /// @nodoc
-abstract class _$GlobalCopyWith<$Res> implements $GlobalCopyWith<$Res> {
-  factory _$GlobalCopyWith(_Global value, $Res Function(_Global) then) =
-      __$GlobalCopyWithImpl<$Res>;
+abstract class _$CountryDtoCopyWith<$Res> implements $CountryDtoCopyWith<$Res> {
+  factory _$CountryDtoCopyWith(
+          _CountryDto value, $Res Function(_CountryDto) then) =
+      __$CountryDtoCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(name: 'NewConfirmed') int? newConfirmed,
+      {@JsonKey(name: 'ID') String? id,
+      @JsonKey(name: 'Country') String? country,
+      @JsonKey(name: 'CountryCode') String? countryCode,
+      @JsonKey(name: 'Slug') String? slug,
+      @JsonKey(name: 'NewConfirmed') int? newConfirmed,
       @JsonKey(name: 'TotalConfirmed') int? totalConfirmed,
       @JsonKey(name: 'NewDeaths') int? newDeaths,
       @JsonKey(name: 'TotalDeaths') int? totalDeaths,
       @JsonKey(name: 'NewRecovered') int? newRecovered,
       @JsonKey(name: 'TotalRecovered') int? totalRecovered,
-      @JsonKey(name: 'Date') String? date});
+      @JsonKey(name: 'Date') String? date,
+      @JsonKey(name: 'Premium') PremiumDto? premium});
 }
 
 /// @nodoc
-class __$GlobalCopyWithImpl<$Res> extends _$GlobalCopyWithImpl<$Res>
-    implements _$GlobalCopyWith<$Res> {
-  __$GlobalCopyWithImpl(_Global _value, $Res Function(_Global) _then)
-      : super(_value, (v) => _then(v as _Global));
+class __$CountryDtoCopyWithImpl<$Res> extends _$CountryDtoCopyWithImpl<$Res>
+    implements _$CountryDtoCopyWith<$Res> {
+  __$CountryDtoCopyWithImpl(
+      _CountryDto _value, $Res Function(_CountryDto) _then)
+      : super(_value, (v) => _then(v as _CountryDto));
 
   @override
-  _Global get _value => super._value as _Global;
+  _CountryDto get _value => super._value as _CountryDto;
 
   @override
   $Res call({
+    Object? id = freezed,
+    Object? country = freezed,
+    Object? countryCode = freezed,
+    Object? slug = freezed,
     Object? newConfirmed = freezed,
     Object? totalConfirmed = freezed,
     Object? newDeaths = freezed,
@@ -169,8 +232,25 @@ class __$GlobalCopyWithImpl<$Res> extends _$GlobalCopyWithImpl<$Res>
     Object? newRecovered = freezed,
     Object? totalRecovered = freezed,
     Object? date = freezed,
+    Object? premium = freezed,
   }) {
-    return _then(_Global(
+    return _then(_CountryDto(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      country: country == freezed
+          ? _value.country
+          : country // ignore: cast_nullable_to_non_nullable
+              as String?,
+      countryCode: countryCode == freezed
+          ? _value.countryCode
+          : countryCode // ignore: cast_nullable_to_non_nullable
+              as String?,
+      slug: slug == freezed
+          ? _value.slug
+          : slug // ignore: cast_nullable_to_non_nullable
+              as String?,
       newConfirmed: newConfirmed == freezed
           ? _value.newConfirmed
           : newConfirmed // ignore: cast_nullable_to_non_nullable
@@ -199,25 +279,46 @@ class __$GlobalCopyWithImpl<$Res> extends _$GlobalCopyWithImpl<$Res>
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
               as String?,
+      premium: premium == freezed
+          ? _value.premium
+          : premium // ignore: cast_nullable_to_non_nullable
+              as PremiumDto?,
     ));
   }
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$_Global implements _Global {
-  _$_Global(
-      {@JsonKey(name: 'NewConfirmed') this.newConfirmed,
+class _$_CountryDto implements _CountryDto {
+  _$_CountryDto(
+      {@JsonKey(name: 'ID') this.id,
+      @JsonKey(name: 'Country') this.country,
+      @JsonKey(name: 'CountryCode') this.countryCode,
+      @JsonKey(name: 'Slug') this.slug,
+      @JsonKey(name: 'NewConfirmed') this.newConfirmed,
       @JsonKey(name: 'TotalConfirmed') this.totalConfirmed,
       @JsonKey(name: 'NewDeaths') this.newDeaths,
       @JsonKey(name: 'TotalDeaths') this.totalDeaths,
       @JsonKey(name: 'NewRecovered') this.newRecovered,
       @JsonKey(name: 'TotalRecovered') this.totalRecovered,
-      @JsonKey(name: 'Date') this.date});
+      @JsonKey(name: 'Date') this.date,
+      @JsonKey(name: 'Premium') this.premium});
 
-  factory _$_Global.fromJson(Map<String, dynamic> json) =>
-      _$$_GlobalFromJson(json);
+  factory _$_CountryDto.fromJson(Map<String, dynamic> json) =>
+      _$$_CountryDtoFromJson(json);
 
+  @override
+  @JsonKey(name: 'ID')
+  final String? id;
+  @override
+  @JsonKey(name: 'Country')
+  final String? country;
+  @override
+  @JsonKey(name: 'CountryCode')
+  final String? countryCode;
+  @override
+  @JsonKey(name: 'Slug')
+  final String? slug;
   @override
   @JsonKey(name: 'NewConfirmed')
   final int? newConfirmed;
@@ -239,17 +340,25 @@ class _$_Global implements _Global {
   @override
   @JsonKey(name: 'Date')
   final String? date;
+  @override
+  @JsonKey(name: 'Premium')
+  final PremiumDto? premium;
 
   @override
   String toString() {
-    return 'Global(newConfirmed: $newConfirmed, totalConfirmed: $totalConfirmed, newDeaths: $newDeaths, totalDeaths: $totalDeaths, newRecovered: $newRecovered, totalRecovered: $totalRecovered, date: $date)';
+    return 'CountryDto(id: $id, country: $country, countryCode: $countryCode, slug: $slug, newConfirmed: $newConfirmed, totalConfirmed: $totalConfirmed, newDeaths: $newDeaths, totalDeaths: $totalDeaths, newRecovered: $newRecovered, totalRecovered: $totalRecovered, date: $date, premium: $premium)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _Global &&
+            other is _CountryDto &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality().equals(other.country, country) &&
+            const DeepCollectionEquality()
+                .equals(other.countryCode, countryCode) &&
+            const DeepCollectionEquality().equals(other.slug, slug) &&
             const DeepCollectionEquality()
                 .equals(other.newConfirmed, newConfirmed) &&
             const DeepCollectionEquality()
@@ -261,43 +370,67 @@ class _$_Global implements _Global {
                 .equals(other.newRecovered, newRecovered) &&
             const DeepCollectionEquality()
                 .equals(other.totalRecovered, totalRecovered) &&
-            const DeepCollectionEquality().equals(other.date, date));
+            const DeepCollectionEquality().equals(other.date, date) &&
+            const DeepCollectionEquality().equals(other.premium, premium));
   }
 
   @override
   int get hashCode => Object.hash(
       runtimeType,
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(country),
+      const DeepCollectionEquality().hash(countryCode),
+      const DeepCollectionEquality().hash(slug),
       const DeepCollectionEquality().hash(newConfirmed),
       const DeepCollectionEquality().hash(totalConfirmed),
       const DeepCollectionEquality().hash(newDeaths),
       const DeepCollectionEquality().hash(totalDeaths),
       const DeepCollectionEquality().hash(newRecovered),
       const DeepCollectionEquality().hash(totalRecovered),
-      const DeepCollectionEquality().hash(date));
+      const DeepCollectionEquality().hash(date),
+      const DeepCollectionEquality().hash(premium));
 
   @JsonKey(ignore: true)
   @override
-  _$GlobalCopyWith<_Global> get copyWith =>
-      __$GlobalCopyWithImpl<_Global>(this, _$identity);
+  _$CountryDtoCopyWith<_CountryDto> get copyWith =>
+      __$CountryDtoCopyWithImpl<_CountryDto>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GlobalToJson(this);
+    return _$$_CountryDtoToJson(this);
   }
 }
 
-abstract class _Global implements Global {
-  factory _Global(
-      {@JsonKey(name: 'NewConfirmed') int? newConfirmed,
+abstract class _CountryDto implements CountryDto {
+  factory _CountryDto(
+      {@JsonKey(name: 'ID') String? id,
+      @JsonKey(name: 'Country') String? country,
+      @JsonKey(name: 'CountryCode') String? countryCode,
+      @JsonKey(name: 'Slug') String? slug,
+      @JsonKey(name: 'NewConfirmed') int? newConfirmed,
       @JsonKey(name: 'TotalConfirmed') int? totalConfirmed,
       @JsonKey(name: 'NewDeaths') int? newDeaths,
       @JsonKey(name: 'TotalDeaths') int? totalDeaths,
       @JsonKey(name: 'NewRecovered') int? newRecovered,
       @JsonKey(name: 'TotalRecovered') int? totalRecovered,
-      @JsonKey(name: 'Date') String? date}) = _$_Global;
+      @JsonKey(name: 'Date') String? date,
+      @JsonKey(name: 'Premium') PremiumDto? premium}) = _$_CountryDto;
 
-  factory _Global.fromJson(Map<String, dynamic> json) = _$_Global.fromJson;
+  factory _CountryDto.fromJson(Map<String, dynamic> json) =
+      _$_CountryDto.fromJson;
 
+  @override
+  @JsonKey(name: 'ID')
+  String? get id;
+  @override
+  @JsonKey(name: 'Country')
+  String? get country;
+  @override
+  @JsonKey(name: 'CountryCode')
+  String? get countryCode;
+  @override
+  @JsonKey(name: 'Slug')
+  String? get slug;
   @override
   @JsonKey(name: 'NewConfirmed')
   int? get newConfirmed;
@@ -320,6 +453,10 @@ abstract class _Global implements Global {
   @JsonKey(name: 'Date')
   String? get date;
   @override
+  @JsonKey(name: 'Premium')
+  PremiumDto? get premium;
+  @override
   @JsonKey(ignore: true)
-  _$GlobalCopyWith<_Global> get copyWith => throw _privateConstructorUsedError;
+  _$CountryDtoCopyWith<_CountryDto> get copyWith =>
+      throw _privateConstructorUsedError;
 }

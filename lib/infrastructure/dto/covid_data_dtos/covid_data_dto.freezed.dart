@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
-part of 'covid_data_model.dart';
+part of 'covid_data_dto.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -14,21 +14,21 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
-CovidDataModel _$CovidDataModelFromJson(Map<String, dynamic> json) {
-  return _CovidDataModel.fromJson(json);
+CovidDataDto _$CovidDataDtoFromJson(Map<String, dynamic> json) {
+  return _CovidDataDto.fromJson(json);
 }
 
 /// @nodoc
-class _$CovidDataModelTearOff {
-  const _$CovidDataModelTearOff();
+class _$CovidDataDtoTearOff {
+  const _$CovidDataDtoTearOff();
 
-  _CovidDataModel call(
+  _CovidDataDto call(
       {@JsonKey(name: 'ID') String? id,
       @JsonKey(name: 'Message') String? message,
-      @JsonKey(name: 'Global') Global? global,
-      @JsonKey(name: 'Countries') List<Country>? countries,
+      @JsonKey(name: 'Global') GlobalDto? global,
+      @JsonKey(name: 'Countries') List<CountryDto>? countries,
       @JsonKey(name: 'Date') String? date}) {
-    return _CovidDataModel(
+    return _CovidDataDto(
       id: id,
       message: message,
       global: global,
@@ -37,56 +37,55 @@ class _$CovidDataModelTearOff {
     );
   }
 
-  CovidDataModel fromJson(Map<String, Object?> json) {
-    return CovidDataModel.fromJson(json);
+  CovidDataDto fromJson(Map<String, Object?> json) {
+    return CovidDataDto.fromJson(json);
   }
 }
 
 /// @nodoc
-const $CovidDataModel = _$CovidDataModelTearOff();
+const $CovidDataDto = _$CovidDataDtoTearOff();
 
 /// @nodoc
-mixin _$CovidDataModel {
+mixin _$CovidDataDto {
   @JsonKey(name: 'ID')
   String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'Message')
   String? get message => throw _privateConstructorUsedError;
   @JsonKey(name: 'Global')
-  Global? get global => throw _privateConstructorUsedError;
+  GlobalDto? get global => throw _privateConstructorUsedError;
   @JsonKey(name: 'Countries')
-  List<Country>? get countries => throw _privateConstructorUsedError;
+  List<CountryDto>? get countries => throw _privateConstructorUsedError;
   @JsonKey(name: 'Date')
   String? get date => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $CovidDataModelCopyWith<CovidDataModel> get copyWith =>
+  $CovidDataDtoCopyWith<CovidDataDto> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $CovidDataModelCopyWith<$Res> {
-  factory $CovidDataModelCopyWith(
-          CovidDataModel value, $Res Function(CovidDataModel) then) =
-      _$CovidDataModelCopyWithImpl<$Res>;
+abstract class $CovidDataDtoCopyWith<$Res> {
+  factory $CovidDataDtoCopyWith(
+          CovidDataDto value, $Res Function(CovidDataDto) then) =
+      _$CovidDataDtoCopyWithImpl<$Res>;
   $Res call(
       {@JsonKey(name: 'ID') String? id,
       @JsonKey(name: 'Message') String? message,
-      @JsonKey(name: 'Global') Global? global,
-      @JsonKey(name: 'Countries') List<Country>? countries,
+      @JsonKey(name: 'Global') GlobalDto? global,
+      @JsonKey(name: 'Countries') List<CountryDto>? countries,
       @JsonKey(name: 'Date') String? date});
 
-  $GlobalCopyWith<$Res>? get global;
+  $GlobalDtoCopyWith<$Res>? get global;
 }
 
 /// @nodoc
-class _$CovidDataModelCopyWithImpl<$Res>
-    implements $CovidDataModelCopyWith<$Res> {
-  _$CovidDataModelCopyWithImpl(this._value, this._then);
+class _$CovidDataDtoCopyWithImpl<$Res> implements $CovidDataDtoCopyWith<$Res> {
+  _$CovidDataDtoCopyWithImpl(this._value, this._then);
 
-  final CovidDataModel _value;
+  final CovidDataDto _value;
   // ignore: unused_field
-  final $Res Function(CovidDataModel) _then;
+  final $Res Function(CovidDataDto) _then;
 
   @override
   $Res call({
@@ -108,11 +107,11 @@ class _$CovidDataModelCopyWithImpl<$Res>
       global: global == freezed
           ? _value.global
           : global // ignore: cast_nullable_to_non_nullable
-              as Global?,
+              as GlobalDto?,
       countries: countries == freezed
           ? _value.countries
           : countries // ignore: cast_nullable_to_non_nullable
-              as List<Country>?,
+              as List<CountryDto>?,
       date: date == freezed
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
@@ -121,45 +120,44 @@ class _$CovidDataModelCopyWithImpl<$Res>
   }
 
   @override
-  $GlobalCopyWith<$Res>? get global {
+  $GlobalDtoCopyWith<$Res>? get global {
     if (_value.global == null) {
       return null;
     }
 
-    return $GlobalCopyWith<$Res>(_value.global!, (value) {
+    return $GlobalDtoCopyWith<$Res>(_value.global!, (value) {
       return _then(_value.copyWith(global: value));
     });
   }
 }
 
 /// @nodoc
-abstract class _$CovidDataModelCopyWith<$Res>
-    implements $CovidDataModelCopyWith<$Res> {
-  factory _$CovidDataModelCopyWith(
-          _CovidDataModel value, $Res Function(_CovidDataModel) then) =
-      __$CovidDataModelCopyWithImpl<$Res>;
+abstract class _$CovidDataDtoCopyWith<$Res>
+    implements $CovidDataDtoCopyWith<$Res> {
+  factory _$CovidDataDtoCopyWith(
+          _CovidDataDto value, $Res Function(_CovidDataDto) then) =
+      __$CovidDataDtoCopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(name: 'ID') String? id,
       @JsonKey(name: 'Message') String? message,
-      @JsonKey(name: 'Global') Global? global,
-      @JsonKey(name: 'Countries') List<Country>? countries,
+      @JsonKey(name: 'Global') GlobalDto? global,
+      @JsonKey(name: 'Countries') List<CountryDto>? countries,
       @JsonKey(name: 'Date') String? date});
 
   @override
-  $GlobalCopyWith<$Res>? get global;
+  $GlobalDtoCopyWith<$Res>? get global;
 }
 
 /// @nodoc
-class __$CovidDataModelCopyWithImpl<$Res>
-    extends _$CovidDataModelCopyWithImpl<$Res>
-    implements _$CovidDataModelCopyWith<$Res> {
-  __$CovidDataModelCopyWithImpl(
-      _CovidDataModel _value, $Res Function(_CovidDataModel) _then)
-      : super(_value, (v) => _then(v as _CovidDataModel));
+class __$CovidDataDtoCopyWithImpl<$Res> extends _$CovidDataDtoCopyWithImpl<$Res>
+    implements _$CovidDataDtoCopyWith<$Res> {
+  __$CovidDataDtoCopyWithImpl(
+      _CovidDataDto _value, $Res Function(_CovidDataDto) _then)
+      : super(_value, (v) => _then(v as _CovidDataDto));
 
   @override
-  _CovidDataModel get _value => super._value as _CovidDataModel;
+  _CovidDataDto get _value => super._value as _CovidDataDto;
 
   @override
   $Res call({
@@ -169,7 +167,7 @@ class __$CovidDataModelCopyWithImpl<$Res>
     Object? countries = freezed,
     Object? date = freezed,
   }) {
-    return _then(_CovidDataModel(
+    return _then(_CovidDataDto(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -181,11 +179,11 @@ class __$CovidDataModelCopyWithImpl<$Res>
       global: global == freezed
           ? _value.global
           : global // ignore: cast_nullable_to_non_nullable
-              as Global?,
+              as GlobalDto?,
       countries: countries == freezed
           ? _value.countries
           : countries // ignore: cast_nullable_to_non_nullable
-              as List<Country>?,
+              as List<CountryDto>?,
       date: date == freezed
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
@@ -196,16 +194,16 @@ class __$CovidDataModelCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_CovidDataModel implements _CovidDataModel {
-  _$_CovidDataModel(
+class _$_CovidDataDto implements _CovidDataDto {
+  _$_CovidDataDto(
       {@JsonKey(name: 'ID') this.id,
       @JsonKey(name: 'Message') this.message,
       @JsonKey(name: 'Global') this.global,
       @JsonKey(name: 'Countries') this.countries,
       @JsonKey(name: 'Date') this.date});
 
-  factory _$_CovidDataModel.fromJson(Map<String, dynamic> json) =>
-      _$$_CovidDataModelFromJson(json);
+  factory _$_CovidDataDto.fromJson(Map<String, dynamic> json) =>
+      _$$_CovidDataDtoFromJson(json);
 
   @override
   @JsonKey(name: 'ID')
@@ -215,24 +213,24 @@ class _$_CovidDataModel implements _CovidDataModel {
   final String? message;
   @override
   @JsonKey(name: 'Global')
-  final Global? global;
+  final GlobalDto? global;
   @override
   @JsonKey(name: 'Countries')
-  final List<Country>? countries;
+  final List<CountryDto>? countries;
   @override
   @JsonKey(name: 'Date')
   final String? date;
 
   @override
   String toString() {
-    return 'CovidDataModel(id: $id, message: $message, global: $global, countries: $countries, date: $date)';
+    return 'CovidDataDto(id: $id, message: $message, global: $global, countries: $countries, date: $date)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _CovidDataModel &&
+            other is _CovidDataDto &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality().equals(other.message, message) &&
             const DeepCollectionEquality().equals(other.global, global) &&
@@ -251,25 +249,25 @@ class _$_CovidDataModel implements _CovidDataModel {
 
   @JsonKey(ignore: true)
   @override
-  _$CovidDataModelCopyWith<_CovidDataModel> get copyWith =>
-      __$CovidDataModelCopyWithImpl<_CovidDataModel>(this, _$identity);
+  _$CovidDataDtoCopyWith<_CovidDataDto> get copyWith =>
+      __$CovidDataDtoCopyWithImpl<_CovidDataDto>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CovidDataModelToJson(this);
+    return _$$_CovidDataDtoToJson(this);
   }
 }
 
-abstract class _CovidDataModel implements CovidDataModel {
-  factory _CovidDataModel(
+abstract class _CovidDataDto implements CovidDataDto {
+  factory _CovidDataDto(
       {@JsonKey(name: 'ID') String? id,
       @JsonKey(name: 'Message') String? message,
-      @JsonKey(name: 'Global') Global? global,
-      @JsonKey(name: 'Countries') List<Country>? countries,
-      @JsonKey(name: 'Date') String? date}) = _$_CovidDataModel;
+      @JsonKey(name: 'Global') GlobalDto? global,
+      @JsonKey(name: 'Countries') List<CountryDto>? countries,
+      @JsonKey(name: 'Date') String? date}) = _$_CovidDataDto;
 
-  factory _CovidDataModel.fromJson(Map<String, dynamic> json) =
-      _$_CovidDataModel.fromJson;
+  factory _CovidDataDto.fromJson(Map<String, dynamic> json) =
+      _$_CovidDataDto.fromJson;
 
   @override
   @JsonKey(name: 'ID')
@@ -279,15 +277,15 @@ abstract class _CovidDataModel implements CovidDataModel {
   String? get message;
   @override
   @JsonKey(name: 'Global')
-  Global? get global;
+  GlobalDto? get global;
   @override
   @JsonKey(name: 'Countries')
-  List<Country>? get countries;
+  List<CountryDto>? get countries;
   @override
   @JsonKey(name: 'Date')
   String? get date;
   @override
   @JsonKey(ignore: true)
-  _$CovidDataModelCopyWith<_CovidDataModel> get copyWith =>
+  _$CovidDataDtoCopyWith<_CovidDataDto> get copyWith =>
       throw _privateConstructorUsedError;
 }

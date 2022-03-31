@@ -1,12 +1,13 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'country.dart';
+part of 'country_dto.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Country _$$_CountryFromJson(Map<String, dynamic> json) => _$_Country(
+_$_CountryDto _$$_CountryDtoFromJson(Map<String, dynamic> json) =>
+    _$_CountryDto(
       id: json['ID'] as String?,
       country: json['Country'] as String?,
       countryCode: json['CountryCode'] as String?,
@@ -20,10 +21,10 @@ _$_Country _$$_CountryFromJson(Map<String, dynamic> json) => _$_Country(
       date: json['Date'] as String?,
       premium: json['Premium'] == null
           ? null
-          : Premium.fromJson(json['Premium'] as Map<String, dynamic>),
+          : PremiumDto.fromJson(json['Premium'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_CountryToJson(_$_Country instance) =>
+Map<String, dynamic> _$$_CountryDtoToJson(_$_CountryDto instance) =>
     <String, dynamic>{
       'ID': instance.id,
       'Country': instance.country,

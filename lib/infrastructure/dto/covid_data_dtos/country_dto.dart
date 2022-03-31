@@ -1,13 +1,13 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-import 'premium.dart';
+import 'premium_dto.dart';
 
-part 'country.freezed.dart';
-part 'country.g.dart';
+part 'country_dto.freezed.dart';
+part 'country_dto.g.dart';
 
 @freezed
-class Country with _$Country {
-  factory Country({
+class CountryDto with _$CountryDto {
+  factory CountryDto({
     @JsonKey(name: 'ID') String? id,
     @JsonKey(name: 'Country') String? country,
     @JsonKey(name: 'CountryCode') String? countryCode,
@@ -19,9 +19,9 @@ class Country with _$Country {
     @JsonKey(name: 'NewRecovered') int? newRecovered,
     @JsonKey(name: 'TotalRecovered') int? totalRecovered,
     @JsonKey(name: 'Date') String? date,
-    @JsonKey(name: 'Premium') Premium? premium,
-  }) = _Country;
+    @JsonKey(name: 'Premium') PremiumDto? premium,
+  }) = _CountryDto;
 
-  factory Country.fromJson(Map<String, dynamic> json) =>
-      _$CountryFromJson(json);
+  factory CountryDto.fromJson(Map<String, dynamic> json) =>
+      _$CountryDtoFromJson(json);
 }

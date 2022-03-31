@@ -1,7 +1,7 @@
-class Premium {
-  Premium();
+class PremiumDto {
+  PremiumDto();
 
-  factory Premium.fromJson(Map<String, dynamic> json) {
+  factory PremiumDto.fromJson(Map<String, dynamic> json) {
     // TODO: implement fromJson
     throw UnimplementedError('Premium.fromJson($json) is not implemented');
   }
