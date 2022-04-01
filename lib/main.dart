@@ -3,7 +3,7 @@ import 'package:flutter_project/injection.dart';
 import 'package:injectable/injectable.dart';
 
 void main() {
-  configureDependencies(Environment.prod);
+  configureDependencies();
   runApp(const MyApp());
 }
 
