@@ -2,6 +2,7 @@ import 'package:flutter/foundation.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'global.freezed.dart';
+part 'global.g.dart';
 
 @freezed
 class Global with _$Global {
@@ -10,7 +11,7 @@ class Global with _$Global {
      required int totalDeath,
      required int totalRecovered,
      required int newCases,
-  }) = _$Global;
+  }) = _Global;
 
 
 }

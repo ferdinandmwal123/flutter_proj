@@ -18,12 +18,12 @@ final _privateConstructorUsedError = UnsupportedError(
 class _$GlobalTearOff {
   const _$GlobalTearOff();
 
-  _$Global call(
+  _Global call(
       {required int confirmed,
       required int totalDeath,
       required int totalRecovered,
       required int newCases}) {
-    return _$Global(
+    return _Global(
       confirmed: confirmed,
       totalDeath: totalDeath,
       totalRecovered: totalRecovered,
@@ -90,21 +90,21 @@ class _$GlobalCopyWithImpl<$Res> implements $GlobalCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$$GlobalCopyWith<$Res> implements $GlobalCopyWith<$Res> {
-  factory _$$GlobalCopyWith(_$Global value, $Res Function(_$Global) then) =
-      __$$GlobalCopyWithImpl<$Res>;
+abstract class _$GlobalCopyWith<$Res> implements $GlobalCopyWith<$Res> {
+  factory _$GlobalCopyWith(_Global value, $Res Function(_Global) then) =
+      __$GlobalCopyWithImpl<$Res>;
   @override
   $Res call({int confirmed, int totalDeath, int totalRecovered, int newCases});
 }
 
 /// @nodoc
-class __$$GlobalCopyWithImpl<$Res> extends _$GlobalCopyWithImpl<$Res>
-    implements _$$GlobalCopyWith<$Res> {
-  __$$GlobalCopyWithImpl(_$Global _value, $Res Function(_$Global) _then)
-      : super(_value, (v) => _then(v as _$Global));
+class __$GlobalCopyWithImpl<$Res> extends _$GlobalCopyWithImpl<$Res>
+    implements _$GlobalCopyWith<$Res> {
+  __$GlobalCopyWithImpl(_Global _value, $Res Function(_Global) _then)
+      : super(_value, (v) => _then(v as _Global));
 
   @override
-  _$Global get _value => super._value as _$Global;
+  _Global get _value => super._value as _Global;
 
   @override
   $Res call({
@@ -113,7 +113,7 @@ class __$$GlobalCopyWithImpl<$Res> extends _$GlobalCopyWithImpl<$Res>
     Object? totalRecovered = freezed,
     Object? newCases = freezed,
   }) {
-    return _then(_$Global(
+    return _then(_Global(
       confirmed: confirmed == freezed
           ? _value.confirmed
           : confirmed // ignore: cast_nullable_to_non_nullable
@@ -136,8 +136,8 @@ class __$$GlobalCopyWithImpl<$Res> extends _$GlobalCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_$Global with DiagnosticableTreeMixin implements _$Global {
-  _$_$Global(
+class _$_Global with DiagnosticableTreeMixin implements _Global {
+  _$_Global(
       {required this.confirmed,
       required this.totalDeath,
       required this.totalRecovered,
@@ -172,7 +172,7 @@ class _$_$Global with DiagnosticableTreeMixin implements _$Global {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$Global &&
+            other is _Global &&
             const DeepCollectionEquality().equals(other.confirmed, confirmed) &&
             const DeepCollectionEquality()
                 .equals(other.totalDeath, totalDeath) &&
@@ -191,16 +191,16 @@ class _$_$Global with DiagnosticableTreeMixin implements _$Global {
 
   @JsonKey(ignore: true)
   @override
-  _$$GlobalCopyWith<_$Global> get copyWith =>
-      __$$GlobalCopyWithImpl<_$Global>(this, _$identity);
+  _$GlobalCopyWith<_Global> get copyWith =>
+      __$GlobalCopyWithImpl<_Global>(this, _$identity);
 }
 
-abstract class _$Global implements Global {
-  factory _$Global(
+abstract class _Global implements Global {
+  factory _Global(
       {required int confirmed,
       required int totalDeath,
       required int totalRecovered,
-      required int newCases}) = _$_$Global;
+      required int newCases}) = _$_Global;
 
   @override
   int get confirmed;
@@ -212,6 +212,5 @@ abstract class _$Global implements Global {
   int get newCases;
   @override
   @JsonKey(ignore: true)
-  _$$GlobalCopyWith<_$Global> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$GlobalCopyWith<_Global> get copyWith => throw _privateConstructorUsedError;
 }
