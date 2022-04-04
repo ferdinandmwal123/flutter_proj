@@ -17,9 +17,9 @@ class _$CovidApiService extends CovidApiService {
   final definitionType = CovidApiService;
 
   @override
-  Future<Response<dynamic>> getGlobal() {
+  Future<Response<GlobalDto>> getGlobal() {
     final $url = '/summary';
     final $request = Request('GET', $url, client.baseUrl);
-    return client.send<dynamic, dynamic>($request);
+    return client.send<GlobalDto, GlobalDto>($request);
   }
 }

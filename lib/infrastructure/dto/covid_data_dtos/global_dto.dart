@@ -5,7 +5,9 @@ part 'global_dto.freezed.dart';
 part 'global_dto.g.dart';
 
 @freezed
-class GlobalDto with _$GlobalDto {
+abstract class GlobalDto implements _$GlobalDto {
+  const GlobalDto._();
+
   factory GlobalDto({
     @JsonKey(name: 'NewConfirmed') int? newConfirmed,
     @JsonKey(name: 'TotalConfirmed') int? totalConfirmed,
@@ -18,17 +20,20 @@ class GlobalDto with _$GlobalDto {
 
   // factory GlobalDto.fromDomain(Global global) {
   //   return GlobalDto(
-  //     newConfirmed: global
+  //     newConfirmed: global.confirmed,
+  //     totalConfirmed: global.confirmed,
+  //     totalDeaths: global.totalDeath,
+
   //   );
   // }
 
-  // Global toDomain() {
-  //   return Global(
-  //       totalDeath: totalDeaths!,
-  //       confirmed: totalConfirmed!,
-  //       totalRecovered: totalRecovered!,
-  //       newCases: newConfirmed!);
-  // }
+  Global toDomain() {
+    return Global(
+        totalDeath: totalDeaths!,
+        confirmed: totalConfirmed!,
+        totalRecovered: totalRecovered!,
+        newCases: newConfirmed!);
+  }
 
   factory GlobalDto.fromJson(Map<String, dynamic> json) =>
       _$GlobalDtoFromJson(json);
