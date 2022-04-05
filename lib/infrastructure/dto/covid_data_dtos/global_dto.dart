@@ -8,13 +8,13 @@ part 'global_dto.g.dart';
  class GlobalDto with _$GlobalDto {
 
   const factory GlobalDto({
-    @JsonKey(name: 'NewConfirmed') int newConfirmed,
-    @JsonKey(name: 'TotalConfirmed') int totalConfirmed,
-    @JsonKey(name: 'NewDeaths') int newDeaths,
-    @JsonKey(name: 'TotalDeaths') int totalDeaths,
-    @JsonKey(name: 'NewRecovered') int newRecovered,
-    @JsonKey(name: 'TotalRecovered') int totalRecovered,
-    @JsonKey(name: 'Date') String date,
+    @JsonKey(name: 'NewConfirmed') @Default(2000) int newConfirmed,
+    @JsonKey(name: 'TotalConfirmed') @Default(2000) int totalConfirmed,
+    @JsonKey(name: 'NewDeaths') @Default(2000) int newDeaths,
+    @JsonKey(name: 'TotalDeaths') @Default(2000) int totalDeaths,
+    @JsonKey(name: 'NewRecovered') @Default(2000) int newRecovered,
+    @JsonKey(name: 'TotalRecovered') @Default(2000) int totalRecovered,
+    @JsonKey(name: 'Date') @Default('2022-04-05T07:47:41.163Z') String date,
   }) = _GlobalDto;
 
   // factory GlobalDto.fromDomain(Global global) {

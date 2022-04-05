@@ -7,13 +7,13 @@ part of 'global_dto.dart';
 // **************************************************************************
 
 _$_GlobalDto _$$_GlobalDtoFromJson(Map<String, dynamic> json) => _$_GlobalDto(
-      newConfirmed: json['NewConfirmed'] as int?,
-      totalConfirmed: json['TotalConfirmed'] as int?,
-      newDeaths: json['NewDeaths'] as int?,
-      totalDeaths: json['TotalDeaths'] as int?,
-      newRecovered: json['NewRecovered'] as int?,
-      totalRecovered: json['TotalRecovered'] as int?,
-      date: json['Date'] as String?,
+      newConfirmed: json['NewConfirmed'] as int? ?? 2000,
+      totalConfirmed: json['TotalConfirmed'] as int? ?? 2000,
+      newDeaths: json['NewDeaths'] as int? ?? 2000,
+      totalDeaths: json['TotalDeaths'] as int? ?? 2000,
+      newRecovered: json['NewRecovered'] as int? ?? 2000,
+      totalRecovered: json['TotalRecovered'] as int? ?? 2000,
+      date: json['Date'] as String? ?? '2022-04-05T07:47:41.163Z',
     );
 
 Map<String, dynamic> _$$_GlobalDtoToJson(_$_GlobalDto instance) =>

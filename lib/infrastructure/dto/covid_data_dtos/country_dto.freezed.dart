@@ -23,18 +23,18 @@ class _$CountryDtoTearOff {
   const _$CountryDtoTearOff();
 
   _CountryDto call(
-      {@JsonKey(name: 'ID') String? id,
-      @JsonKey(name: 'Country') String? country,
-      @JsonKey(name: 'CountryCode') String? countryCode,
-      @JsonKey(name: 'Slug') String? slug,
-      @JsonKey(name: 'NewConfirmed') int? newConfirmed,
-      @JsonKey(name: 'TotalConfirmed') int? totalConfirmed,
-      @JsonKey(name: 'NewDeaths') int? newDeaths,
-      @JsonKey(name: 'TotalDeaths') int? totalDeaths,
-      @JsonKey(name: 'NewRecovered') int? newRecovered,
-      @JsonKey(name: 'TotalRecovered') int? totalRecovered,
-      @JsonKey(name: 'Date') String? date,
-      @JsonKey(name: 'Premium') PremiumDto? premium}) {
+      {@JsonKey(name: 'ID') String id = '1',
+      @JsonKey(name: 'Country') String country = 'USA',
+      @JsonKey(name: 'CountryCode') String countryCode = 'US',
+      @JsonKey(name: 'Slug') String slug = 'united states',
+      @JsonKey(name: 'NewConfirmed') int newConfirmed = 1000,
+      @JsonKey(name: 'TotalConfirmed') int totalConfirmed = 1000,
+      @JsonKey(name: 'NewDeaths') int newDeaths = 1000,
+      @JsonKey(name: 'TotalDeaths') int totalDeaths = 1000,
+      @JsonKey(name: 'NewRecovered') int newRecovered = 1000,
+      @JsonKey(name: 'TotalRecovered') int totalRecovered = 1000,
+      @JsonKey(name: 'Date') String date = '2022-04-05T07:47:41.163Z',
+      @JsonKey(name: 'Premium') required PremiumDto premium}) {
     return _CountryDto(
       id: id,
       country: country,
@@ -62,29 +62,29 @@ const $CountryDto = _$CountryDtoTearOff();
 /// @nodoc
 mixin _$CountryDto {
   @JsonKey(name: 'ID')
-  String? get id => throw _privateConstructorUsedError;
+  String get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'Country')
-  String? get country => throw _privateConstructorUsedError;
+  String get country => throw _privateConstructorUsedError;
   @JsonKey(name: 'CountryCode')
-  String? get countryCode => throw _privateConstructorUsedError;
+  String get countryCode => throw _privateConstructorUsedError;
   @JsonKey(name: 'Slug')
-  String? get slug => throw _privateConstructorUsedError;
+  String get slug => throw _privateConstructorUsedError;
   @JsonKey(name: 'NewConfirmed')
-  int? get newConfirmed => throw _privateConstructorUsedError;
+  int get newConfirmed => throw _privateConstructorUsedError;
   @JsonKey(name: 'TotalConfirmed')
-  int? get totalConfirmed => throw _privateConstructorUsedError;
+  int get totalConfirmed => throw _privateConstructorUsedError;
   @JsonKey(name: 'NewDeaths')
-  int? get newDeaths => throw _privateConstructorUsedError;
+  int get newDeaths => throw _privateConstructorUsedError;
   @JsonKey(name: 'TotalDeaths')
-  int? get totalDeaths => throw _privateConstructorUsedError;
+  int get totalDeaths => throw _privateConstructorUsedError;
   @JsonKey(name: 'NewRecovered')
-  int? get newRecovered => throw _privateConstructorUsedError;
+  int get newRecovered => throw _privateConstructorUsedError;
   @JsonKey(name: 'TotalRecovered')
-  int? get totalRecovered => throw _privateConstructorUsedError;
+  int get totalRecovered => throw _privateConstructorUsedError;
   @JsonKey(name: 'Date')
-  String? get date => throw _privateConstructorUsedError;
+  String get date => throw _privateConstructorUsedError;
   @JsonKey(name: 'Premium')
-  PremiumDto? get premium => throw _privateConstructorUsedError;
+  PremiumDto get premium => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -98,18 +98,18 @@ abstract class $CountryDtoCopyWith<$Res> {
           CountryDto value, $Res Function(CountryDto) then) =
       _$CountryDtoCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(name: 'ID') String? id,
-      @JsonKey(name: 'Country') String? country,
-      @JsonKey(name: 'CountryCode') String? countryCode,
-      @JsonKey(name: 'Slug') String? slug,
-      @JsonKey(name: 'NewConfirmed') int? newConfirmed,
-      @JsonKey(name: 'TotalConfirmed') int? totalConfirmed,
-      @JsonKey(name: 'NewDeaths') int? newDeaths,
-      @JsonKey(name: 'TotalDeaths') int? totalDeaths,
-      @JsonKey(name: 'NewRecovered') int? newRecovered,
-      @JsonKey(name: 'TotalRecovered') int? totalRecovered,
-      @JsonKey(name: 'Date') String? date,
-      @JsonKey(name: 'Premium') PremiumDto? premium});
+      {@JsonKey(name: 'ID') String id,
+      @JsonKey(name: 'Country') String country,
+      @JsonKey(name: 'CountryCode') String countryCode,
+      @JsonKey(name: 'Slug') String slug,
+      @JsonKey(name: 'NewConfirmed') int newConfirmed,
+      @JsonKey(name: 'TotalConfirmed') int totalConfirmed,
+      @JsonKey(name: 'NewDeaths') int newDeaths,
+      @JsonKey(name: 'TotalDeaths') int totalDeaths,
+      @JsonKey(name: 'NewRecovered') int newRecovered,
+      @JsonKey(name: 'TotalRecovered') int totalRecovered,
+      @JsonKey(name: 'Date') String date,
+      @JsonKey(name: 'Premium') PremiumDto premium});
 }
 
 /// @nodoc
@@ -139,51 +139,51 @@ class _$CountryDtoCopyWithImpl<$Res> implements $CountryDtoCopyWith<$Res> {
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       country: country == freezed
           ? _value.country
           : country // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       countryCode: countryCode == freezed
           ? _value.countryCode
           : countryCode // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       slug: slug == freezed
           ? _value.slug
           : slug // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       newConfirmed: newConfirmed == freezed
           ? _value.newConfirmed
           : newConfirmed // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as int,
       totalConfirmed: totalConfirmed == freezed
           ? _value.totalConfirmed
           : totalConfirmed // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as int,
       newDeaths: newDeaths == freezed
           ? _value.newDeaths
           : newDeaths // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as int,
       totalDeaths: totalDeaths == freezed
           ? _value.totalDeaths
           : totalDeaths // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as int,
       newRecovered: newRecovered == freezed
           ? _value.newRecovered
           : newRecovered // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as int,
       totalRecovered: totalRecovered == freezed
           ? _value.totalRecovered
           : totalRecovered // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as int,
       date: date == freezed
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       premium: premium == freezed
           ? _value.premium
           : premium // ignore: cast_nullable_to_non_nullable
-              as PremiumDto?,
+              as PremiumDto,
     ));
   }
 }
@@ -195,18 +195,18 @@ abstract class _$CountryDtoCopyWith<$Res> implements $CountryDtoCopyWith<$Res> {
       __$CountryDtoCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(name: 'ID') String? id,
-      @JsonKey(name: 'Country') String? country,
-      @JsonKey(name: 'CountryCode') String? countryCode,
-      @JsonKey(name: 'Slug') String? slug,
-      @JsonKey(name: 'NewConfirmed') int? newConfirmed,
-      @JsonKey(name: 'TotalConfirmed') int? totalConfirmed,
-      @JsonKey(name: 'NewDeaths') int? newDeaths,
-      @JsonKey(name: 'TotalDeaths') int? totalDeaths,
-      @JsonKey(name: 'NewRecovered') int? newRecovered,
-      @JsonKey(name: 'TotalRecovered') int? totalRecovered,
-      @JsonKey(name: 'Date') String? date,
-      @JsonKey(name: 'Premium') PremiumDto? premium});
+      {@JsonKey(name: 'ID') String id,
+      @JsonKey(name: 'Country') String country,
+      @JsonKey(name: 'CountryCode') String countryCode,
+      @JsonKey(name: 'Slug') String slug,
+      @JsonKey(name: 'NewConfirmed') int newConfirmed,
+      @JsonKey(name: 'TotalConfirmed') int totalConfirmed,
+      @JsonKey(name: 'NewDeaths') int newDeaths,
+      @JsonKey(name: 'TotalDeaths') int totalDeaths,
+      @JsonKey(name: 'NewRecovered') int newRecovered,
+      @JsonKey(name: 'TotalRecovered') int totalRecovered,
+      @JsonKey(name: 'Date') String date,
+      @JsonKey(name: 'Premium') PremiumDto premium});
 }
 
 /// @nodoc
@@ -238,51 +238,51 @@ class __$CountryDtoCopyWithImpl<$Res> extends _$CountryDtoCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       country: country == freezed
           ? _value.country
           : country // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       countryCode: countryCode == freezed
           ? _value.countryCode
           : countryCode // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       slug: slug == freezed
           ? _value.slug
           : slug // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       newConfirmed: newConfirmed == freezed
           ? _value.newConfirmed
           : newConfirmed // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as int,
       totalConfirmed: totalConfirmed == freezed
           ? _value.totalConfirmed
           : totalConfirmed // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as int,
       newDeaths: newDeaths == freezed
           ? _value.newDeaths
           : newDeaths // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as int,
       totalDeaths: totalDeaths == freezed
           ? _value.totalDeaths
           : totalDeaths // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as int,
       newRecovered: newRecovered == freezed
           ? _value.newRecovered
           : newRecovered // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as int,
       totalRecovered: totalRecovered == freezed
           ? _value.totalRecovered
           : totalRecovered // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as int,
       date: date == freezed
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       premium: premium == freezed
           ? _value.premium
           : premium // ignore: cast_nullable_to_non_nullable
-              as PremiumDto?,
+              as PremiumDto,
     ));
   }
 }
@@ -291,58 +291,58 @@ class __$CountryDtoCopyWithImpl<$Res> extends _$CountryDtoCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_CountryDto implements _CountryDto {
   _$_CountryDto(
-      {@JsonKey(name: 'ID') this.id,
-      @JsonKey(name: 'Country') this.country,
-      @JsonKey(name: 'CountryCode') this.countryCode,
-      @JsonKey(name: 'Slug') this.slug,
-      @JsonKey(name: 'NewConfirmed') this.newConfirmed,
-      @JsonKey(name: 'TotalConfirmed') this.totalConfirmed,
-      @JsonKey(name: 'NewDeaths') this.newDeaths,
-      @JsonKey(name: 'TotalDeaths') this.totalDeaths,
-      @JsonKey(name: 'NewRecovered') this.newRecovered,
-      @JsonKey(name: 'TotalRecovered') this.totalRecovered,
-      @JsonKey(name: 'Date') this.date,
-      @JsonKey(name: 'Premium') this.premium});
+      {@JsonKey(name: 'ID') this.id = '1',
+      @JsonKey(name: 'Country') this.country = 'USA',
+      @JsonKey(name: 'CountryCode') this.countryCode = 'US',
+      @JsonKey(name: 'Slug') this.slug = 'united states',
+      @JsonKey(name: 'NewConfirmed') this.newConfirmed = 1000,
+      @JsonKey(name: 'TotalConfirmed') this.totalConfirmed = 1000,
+      @JsonKey(name: 'NewDeaths') this.newDeaths = 1000,
+      @JsonKey(name: 'TotalDeaths') this.totalDeaths = 1000,
+      @JsonKey(name: 'NewRecovered') this.newRecovered = 1000,
+      @JsonKey(name: 'TotalRecovered') this.totalRecovered = 1000,
+      @JsonKey(name: 'Date') this.date = '2022-04-05T07:47:41.163Z',
+      @JsonKey(name: 'Premium') required this.premium});
 
   factory _$_CountryDto.fromJson(Map<String, dynamic> json) =>
       _$$_CountryDtoFromJson(json);
 
   @override
   @JsonKey(name: 'ID')
-  final String? id;
+  final String id;
   @override
   @JsonKey(name: 'Country')
-  final String? country;
+  final String country;
   @override
   @JsonKey(name: 'CountryCode')
-  final String? countryCode;
+  final String countryCode;
   @override
   @JsonKey(name: 'Slug')
-  final String? slug;
+  final String slug;
   @override
   @JsonKey(name: 'NewConfirmed')
-  final int? newConfirmed;
+  final int newConfirmed;
   @override
   @JsonKey(name: 'TotalConfirmed')
-  final int? totalConfirmed;
+  final int totalConfirmed;
   @override
   @JsonKey(name: 'NewDeaths')
-  final int? newDeaths;
+  final int newDeaths;
   @override
   @JsonKey(name: 'TotalDeaths')
-  final int? totalDeaths;
+  final int totalDeaths;
   @override
   @JsonKey(name: 'NewRecovered')
-  final int? newRecovered;
+  final int newRecovered;
   @override
   @JsonKey(name: 'TotalRecovered')
-  final int? totalRecovered;
+  final int totalRecovered;
   @override
   @JsonKey(name: 'Date')
-  final String? date;
+  final String date;
   @override
   @JsonKey(name: 'Premium')
-  final PremiumDto? premium;
+  final PremiumDto premium;
 
   @override
   String toString() {
@@ -403,58 +403,58 @@ class _$_CountryDto implements _CountryDto {
 
 abstract class _CountryDto implements CountryDto {
   factory _CountryDto(
-      {@JsonKey(name: 'ID') String? id,
-      @JsonKey(name: 'Country') String? country,
-      @JsonKey(name: 'CountryCode') String? countryCode,
-      @JsonKey(name: 'Slug') String? slug,
-      @JsonKey(name: 'NewConfirmed') int? newConfirmed,
-      @JsonKey(name: 'TotalConfirmed') int? totalConfirmed,
-      @JsonKey(name: 'NewDeaths') int? newDeaths,
-      @JsonKey(name: 'TotalDeaths') int? totalDeaths,
-      @JsonKey(name: 'NewRecovered') int? newRecovered,
-      @JsonKey(name: 'TotalRecovered') int? totalRecovered,
-      @JsonKey(name: 'Date') String? date,
-      @JsonKey(name: 'Premium') PremiumDto? premium}) = _$_CountryDto;
+      {@JsonKey(name: 'ID') String id,
+      @JsonKey(name: 'Country') String country,
+      @JsonKey(name: 'CountryCode') String countryCode,
+      @JsonKey(name: 'Slug') String slug,
+      @JsonKey(name: 'NewConfirmed') int newConfirmed,
+      @JsonKey(name: 'TotalConfirmed') int totalConfirmed,
+      @JsonKey(name: 'NewDeaths') int newDeaths,
+      @JsonKey(name: 'TotalDeaths') int totalDeaths,
+      @JsonKey(name: 'NewRecovered') int newRecovered,
+      @JsonKey(name: 'TotalRecovered') int totalRecovered,
+      @JsonKey(name: 'Date') String date,
+      @JsonKey(name: 'Premium') required PremiumDto premium}) = _$_CountryDto;
 
   factory _CountryDto.fromJson(Map<String, dynamic> json) =
       _$_CountryDto.fromJson;
 
   @override
   @JsonKey(name: 'ID')
-  String? get id;
+  String get id;
   @override
   @JsonKey(name: 'Country')
-  String? get country;
+  String get country;
   @override
   @JsonKey(name: 'CountryCode')
-  String? get countryCode;
+  String get countryCode;
   @override
   @JsonKey(name: 'Slug')
-  String? get slug;
+  String get slug;
   @override
   @JsonKey(name: 'NewConfirmed')
-  int? get newConfirmed;
+  int get newConfirmed;
   @override
   @JsonKey(name: 'TotalConfirmed')
-  int? get totalConfirmed;
+  int get totalConfirmed;
   @override
   @JsonKey(name: 'NewDeaths')
-  int? get newDeaths;
+  int get newDeaths;
   @override
   @JsonKey(name: 'TotalDeaths')
-  int? get totalDeaths;
+  int get totalDeaths;
   @override
   @JsonKey(name: 'NewRecovered')
-  int? get newRecovered;
+  int get newRecovered;
   @override
   @JsonKey(name: 'TotalRecovered')
-  int? get totalRecovered;
+  int get totalRecovered;
   @override
   @JsonKey(name: 'Date')
-  String? get date;
+  String get date;
   @override
   @JsonKey(name: 'Premium')
-  PremiumDto? get premium;
+  PremiumDto get premium;
   @override
   @JsonKey(ignore: true)
   _$CountryDtoCopyWith<_CountryDto> get copyWith =>

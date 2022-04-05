@@ -23,11 +23,11 @@ class _$CovidDataDtoTearOff {
   const _$CovidDataDtoTearOff();
 
   _CovidDataDto call(
-      {@JsonKey(name: 'ID') String? id,
-      @JsonKey(name: 'Message') String? message,
-      @JsonKey(name: 'Global') GlobalDto? global,
-      @JsonKey(name: 'Countries') List<CountryDto>? countries,
-      @JsonKey(name: 'Date') String? date}) {
+      {@JsonKey(name: 'ID') String id = '1',
+      @JsonKey(name: 'Message') String message = '',
+      @JsonKey(name: 'Global') required GlobalDto global,
+      @JsonKey(name: 'Countries') required List<CountryDto> countries,
+      @JsonKey(name: 'Date') String date = '2022-04-05T07:47:41.163Z'}) {
     return _CovidDataDto(
       id: id,
       message: message,
@@ -48,15 +48,15 @@ const $CovidDataDto = _$CovidDataDtoTearOff();
 /// @nodoc
 mixin _$CovidDataDto {
   @JsonKey(name: 'ID')
-  String? get id => throw _privateConstructorUsedError;
+  String get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'Message')
-  String? get message => throw _privateConstructorUsedError;
+  String get message => throw _privateConstructorUsedError;
   @JsonKey(name: 'Global')
-  GlobalDto? get global => throw _privateConstructorUsedError;
+  GlobalDto get global => throw _privateConstructorUsedError;
   @JsonKey(name: 'Countries')
-  List<CountryDto>? get countries => throw _privateConstructorUsedError;
+  List<CountryDto> get countries => throw _privateConstructorUsedError;
   @JsonKey(name: 'Date')
-  String? get date => throw _privateConstructorUsedError;
+  String get date => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -70,13 +70,13 @@ abstract class $CovidDataDtoCopyWith<$Res> {
           CovidDataDto value, $Res Function(CovidDataDto) then) =
       _$CovidDataDtoCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(name: 'ID') String? id,
-      @JsonKey(name: 'Message') String? message,
-      @JsonKey(name: 'Global') GlobalDto? global,
-      @JsonKey(name: 'Countries') List<CountryDto>? countries,
-      @JsonKey(name: 'Date') String? date});
+      {@JsonKey(name: 'ID') String id,
+      @JsonKey(name: 'Message') String message,
+      @JsonKey(name: 'Global') GlobalDto global,
+      @JsonKey(name: 'Countries') List<CountryDto> countries,
+      @JsonKey(name: 'Date') String date});
 
-  $GlobalDtoCopyWith<$Res>? get global;
+  $GlobalDtoCopyWith<$Res> get global;
 }
 
 /// @nodoc
@@ -99,33 +99,29 @@ class _$CovidDataDtoCopyWithImpl<$Res> implements $CovidDataDtoCopyWith<$Res> {
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       message: message == freezed
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       global: global == freezed
           ? _value.global
           : global // ignore: cast_nullable_to_non_nullable
-              as GlobalDto?,
+              as GlobalDto,
       countries: countries == freezed
           ? _value.countries
           : countries // ignore: cast_nullable_to_non_nullable
-              as List<CountryDto>?,
+              as List<CountryDto>,
       date: date == freezed
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
     ));
   }
 
   @override
-  $GlobalDtoCopyWith<$Res>? get global {
-    if (_value.global == null) {
-      return null;
-    }
-
-    return $GlobalDtoCopyWith<$Res>(_value.global!, (value) {
+  $GlobalDtoCopyWith<$Res> get global {
+    return $GlobalDtoCopyWith<$Res>(_value.global, (value) {
       return _then(_value.copyWith(global: value));
     });
   }
@@ -139,14 +135,14 @@ abstract class _$CovidDataDtoCopyWith<$Res>
       __$CovidDataDtoCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(name: 'ID') String? id,
-      @JsonKey(name: 'Message') String? message,
-      @JsonKey(name: 'Global') GlobalDto? global,
-      @JsonKey(name: 'Countries') List<CountryDto>? countries,
-      @JsonKey(name: 'Date') String? date});
+      {@JsonKey(name: 'ID') String id,
+      @JsonKey(name: 'Message') String message,
+      @JsonKey(name: 'Global') GlobalDto global,
+      @JsonKey(name: 'Countries') List<CountryDto> countries,
+      @JsonKey(name: 'Date') String date});
 
   @override
-  $GlobalDtoCopyWith<$Res>? get global;
+  $GlobalDtoCopyWith<$Res> get global;
 }
 
 /// @nodoc
@@ -171,23 +167,23 @@ class __$CovidDataDtoCopyWithImpl<$Res> extends _$CovidDataDtoCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       message: message == freezed
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       global: global == freezed
           ? _value.global
           : global // ignore: cast_nullable_to_non_nullable
-              as GlobalDto?,
+              as GlobalDto,
       countries: countries == freezed
           ? _value.countries
           : countries // ignore: cast_nullable_to_non_nullable
-              as List<CountryDto>?,
+              as List<CountryDto>,
       date: date == freezed
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
     ));
   }
 }
@@ -196,30 +192,30 @@ class __$CovidDataDtoCopyWithImpl<$Res> extends _$CovidDataDtoCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_CovidDataDto implements _CovidDataDto {
   _$_CovidDataDto(
-      {@JsonKey(name: 'ID') this.id,
-      @JsonKey(name: 'Message') this.message,
-      @JsonKey(name: 'Global') this.global,
-      @JsonKey(name: 'Countries') this.countries,
-      @JsonKey(name: 'Date') this.date});
+      {@JsonKey(name: 'ID') this.id = '1',
+      @JsonKey(name: 'Message') this.message = '',
+      @JsonKey(name: 'Global') required this.global,
+      @JsonKey(name: 'Countries') required this.countries,
+      @JsonKey(name: 'Date') this.date = '2022-04-05T07:47:41.163Z'});
 
   factory _$_CovidDataDto.fromJson(Map<String, dynamic> json) =>
       _$$_CovidDataDtoFromJson(json);
 
   @override
   @JsonKey(name: 'ID')
-  final String? id;
+  final String id;
   @override
   @JsonKey(name: 'Message')
-  final String? message;
+  final String message;
   @override
   @JsonKey(name: 'Global')
-  final GlobalDto? global;
+  final GlobalDto global;
   @override
   @JsonKey(name: 'Countries')
-  final List<CountryDto>? countries;
+  final List<CountryDto> countries;
   @override
   @JsonKey(name: 'Date')
-  final String? date;
+  final String date;
 
   @override
   String toString() {
@@ -260,30 +256,30 @@ class _$_CovidDataDto implements _CovidDataDto {
 
 abstract class _CovidDataDto implements CovidDataDto {
   factory _CovidDataDto(
-      {@JsonKey(name: 'ID') String? id,
-      @JsonKey(name: 'Message') String? message,
-      @JsonKey(name: 'Global') GlobalDto? global,
-      @JsonKey(name: 'Countries') List<CountryDto>? countries,
-      @JsonKey(name: 'Date') String? date}) = _$_CovidDataDto;
+      {@JsonKey(name: 'ID') String id,
+      @JsonKey(name: 'Message') String message,
+      @JsonKey(name: 'Global') required GlobalDto global,
+      @JsonKey(name: 'Countries') required List<CountryDto> countries,
+      @JsonKey(name: 'Date') String date}) = _$_CovidDataDto;
 
   factory _CovidDataDto.fromJson(Map<String, dynamic> json) =
       _$_CovidDataDto.fromJson;
 
   @override
   @JsonKey(name: 'ID')
-  String? get id;
+  String get id;
   @override
   @JsonKey(name: 'Message')
-  String? get message;
+  String get message;
   @override
   @JsonKey(name: 'Global')
-  GlobalDto? get global;
+  GlobalDto get global;
   @override
   @JsonKey(name: 'Countries')
-  List<CountryDto>? get countries;
+  List<CountryDto> get countries;
   @override
   @JsonKey(name: 'Date')
-  String? get date;
+  String get date;
   @override
   @JsonKey(ignore: true)
   _$CovidDataDtoCopyWith<_CovidDataDto> get copyWith =>
