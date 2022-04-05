@@ -207,16 +207,15 @@ class __$GlobalDtoCopyWithImpl<$Res> extends _$GlobalDtoCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_GlobalDto extends _GlobalDto {
-  _$_GlobalDto(
+class _$_GlobalDto implements _GlobalDto {
+  const _$_GlobalDto(
       {@JsonKey(name: 'NewConfirmed') this.newConfirmed,
       @JsonKey(name: 'TotalConfirmed') this.totalConfirmed,
       @JsonKey(name: 'NewDeaths') this.newDeaths,
       @JsonKey(name: 'TotalDeaths') this.totalDeaths,
       @JsonKey(name: 'NewRecovered') this.newRecovered,
       @JsonKey(name: 'TotalRecovered') this.totalRecovered,
-      @JsonKey(name: 'Date') this.date})
-      : super._();
+      @JsonKey(name: 'Date') this.date});
 
   factory _$_GlobalDto.fromJson(Map<String, dynamic> json) =>
       _$$_GlobalDtoFromJson(json);
@@ -289,8 +288,8 @@ class _$_GlobalDto extends _GlobalDto {
   }
 }
 
-abstract class _GlobalDto extends GlobalDto {
-  factory _GlobalDto(
+abstract class _GlobalDto implements GlobalDto {
+  const factory _GlobalDto(
       {@JsonKey(name: 'NewConfirmed') int? newConfirmed,
       @JsonKey(name: 'TotalConfirmed') int? totalConfirmed,
       @JsonKey(name: 'NewDeaths') int? newDeaths,
@@ -298,7 +297,6 @@ abstract class _GlobalDto extends GlobalDto {
       @JsonKey(name: 'NewRecovered') int? newRecovered,
       @JsonKey(name: 'TotalRecovered') int? totalRecovered,
       @JsonKey(name: 'Date') String? date}) = _$_GlobalDto;
-  _GlobalDto._() : super._();
 
   factory _GlobalDto.fromJson(Map<String, dynamic> json) =
       _$_GlobalDto.fromJson;

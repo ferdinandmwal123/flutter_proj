@@ -6,10 +6,10 @@ import 'package:logger/logger.dart';
 
 part 'covid_api_service.chopper.dart';
 
-@LazySingleton()
+// @LazySingleton()
 @ChopperApi(baseUrl: '/summary')
 abstract class CovidApiService extends ChopperService {
-  var logger = Logger();
+  // var logger = Logger();
   @Get()
   Future<Response<GlobalDto>> getGlobal();
 
