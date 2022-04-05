@@ -286,6 +286,12 @@ class _$_GlobalDto implements _GlobalDto {
   Map<String, dynamic> toJson() {
     return _$$_GlobalDtoToJson(this);
   }
+
+  @override
+  Global toDomain() {
+    // TODO: implement toDomain
+    throw UnimplementedError();
+  }
 }
 
 abstract class _GlobalDto implements GlobalDto {

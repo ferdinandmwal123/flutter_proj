@@ -5,8 +5,7 @@ part 'global_dto.freezed.dart';
 part 'global_dto.g.dart';
 
 @freezed
- class GlobalDto with _$GlobalDto {
-
+class GlobalDto with _$GlobalDto {
   const factory GlobalDto({
     @JsonKey(name: 'NewConfirmed') @Default(2000) int newConfirmed,
     @JsonKey(name: 'TotalConfirmed') @Default(2000) int totalConfirmed,
@@ -17,21 +16,14 @@ part 'global_dto.g.dart';
     @JsonKey(name: 'Date') @Default('2022-04-05T07:47:41.163Z') String date,
   }) = _GlobalDto;
 
+  //
+  // * INFO: fromDomain is only required if you would need to communicate back to the server/api (infrastructure layer)
   // factory GlobalDto.fromDomain(Global global) {
   //   return GlobalDto(
   //     newConfirmed: global.confirmed,
   //     totalConfirmed: global.confirmed,
   //     totalDeaths: global.totalDeath,
-
   //   );
-  // }
-
-  // Global toDomain() {
-  //   return Global(
-  //       totalDeath: totalDeaths!,
-  //       confirmed: totalConfirmed!,
-  //       totalRecovered: totalRecovered!,
-  //       newCases: newConfirmed!);
   // }
 
   factory GlobalDto.fromJson(Map<String, dynamic> json) =>
