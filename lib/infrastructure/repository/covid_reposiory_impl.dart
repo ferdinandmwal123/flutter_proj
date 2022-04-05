@@ -6,6 +6,13 @@ import 'package:injectable/injectable.dart';
 class CovidRepositoryImpl implements ICovidRepositoryFacade {
   @override
   Future<void> getGlobal() async {
-    final response = await CovidApiService.create().getGlobal();
+     // TODO: implement getAll
+    throw UnimplementedError();
+  }
+
+  @override
+  Future<void> getAll() {
+    // TODO: implement getAll
+    throw UnimplementedError();
   }
 }
