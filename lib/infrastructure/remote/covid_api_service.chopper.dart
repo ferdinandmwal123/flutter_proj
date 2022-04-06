@@ -22,4 +22,11 @@ class _$CovidApiService extends CovidApiService {
     final $request = Request('GET', $url, client.baseUrl);
     return client.send<GlobalDto, GlobalDto>($request);
   }
+
+  @override
+  Future<Response<CovidDataDto>> getAll() {
+    final $url = '/summary';
+    final $request = Request('GET', $url, client.baseUrl);
+    return client.send<CovidDataDto, CovidDataDto>($request);
+  }
 }

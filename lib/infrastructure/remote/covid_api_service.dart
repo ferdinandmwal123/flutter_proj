@@ -1,8 +1,8 @@
 import 'package:chopper/chopper.dart';
 import 'package:flutter_project/infrastructure/core/constants.dart';
+import 'package:flutter_project/infrastructure/dto/covid_data_dtos/covid_data_dto.dart';
 import 'package:flutter_project/infrastructure/dto/covid_data_dtos/global_dto.dart';
-import 'package:injectable/injectable.dart';
-import 'package:logger/logger.dart';
+
 
 part 'covid_api_service.chopper.dart';
 
@@ -12,6 +12,9 @@ abstract class CovidApiService extends ChopperService {
   // var logger = Logger();
   @Get()
   Future<Response<GlobalDto>> getGlobal();
+
+  @Get()
+  Future<Response<CovidDataDto>> getAll();
 
   // @factoryMethod  //injectable will automatically register it as an asynchronous factory because the return type is a Future.
   static CovidApiService create() {
