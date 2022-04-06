@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_project/infrastructure/remote/covid_api_service.dart';
 import 'package:flutter_project/injection.dart';
 import 'package:injectable/injectable.dart';
 
 void main() {
   configureDependencies();
   runApp(const MyApp());
+
 }
+
+
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -112,7 +116,6 @@ class _MyHomePageState extends State<MyHomePage> {
         onPressed: _incrementCounter,
         tooltip: 'Increment',
         child: const Icon(Icons.add),
-        
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
