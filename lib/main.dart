@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_project/infrastructure/remote/covid_api_service.dart';
 import 'package:flutter_project/injection.dart';
 import 'package:injectable/injectable.dart';
 
