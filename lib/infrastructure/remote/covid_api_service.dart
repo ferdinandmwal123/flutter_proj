@@ -24,5 +24,7 @@ class CovidApiService {
     GlobalDto? data = GlobalDto.fromJson(response.data);
 
     return data;
+
+    
   }
 }
