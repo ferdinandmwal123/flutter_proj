@@ -1,3 +1,4 @@
+import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter_project/infrastructure/core/constants.dart';
 import 'package:flutter_project/infrastructure/dto/covid_data_dtos/covid_data_dto.dart';
@@ -8,30 +9,27 @@ import 'package:injectable/injectable.dart';
 class CovidApiService {
   static var dio = Dio();
 
-  // Future<CovidDataDto?> getAllCovidData() async {
+  Future<Either<Exception, CovidDataDto?>> getAllCovidData() async {
+    try {
+      final response = await dio.get(BASE_URL);
 
-  //   final response = await dio.get(BASE_URL);
+      CovidDataDto? data = CovidDataDto.fromJson(response.data);
 
-  //   CovidDataDto? data = CovidDataDto.fromJson(response.data);
+      return right(data);
+    } on DioError catch (e) {
+      if (e.response != null) {
+        print(e.response!.data);
+        print(e.response!.headers);
+        print(e.response!.requestOptions);
+        return left(e);
+      } else {
+        // Something happened in setting up or sending the request that triggered an Error
+        print(e.requestOptions);
+        print(e.message);
+        return left(e);
+      }
+    }
 
-  //   return data;
-  // }
 
-  Future<Response> getAllCovidData() async {
-    final response = await dio.get(BASE_URL);
-    return response;
   }
-
-  Future<Response> getGlobalData() async{
-     final response = await dio.get(BASE_URL);
-      return response;
-  }
-
-//   Future<GlobalDto?> getGlobalData() async {
-//     final response = await dio.get(BASE_URL);
-
-//     GlobalDto? data = GlobalDto.fromJson(response.data);
-
-//     return data;
-//   }
-// }
+}

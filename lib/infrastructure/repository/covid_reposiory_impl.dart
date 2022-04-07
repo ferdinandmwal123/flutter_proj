@@ -1,6 +1,8 @@
 import 'package:dio/dio.dart';
 import 'package:dio/src/response.dart';
 import 'package:dartz/dartz.dart';
+import 'package:flutter_project/domain/models/global.dart';
+import 'package:flutter_project/domain/models/covid_data.dart';
 import 'package:flutter_project/domain/repository/i_covid_repository_facade.dart';
 import 'package:flutter_project/infrastructure/dto/covid_data_dtos/covid_data_dto.dart';
 import 'package:flutter_project/infrastructure/remote/covid_api_service.dart';
@@ -13,15 +15,13 @@ class CovidRepositoryImpl implements ICovidRepositoryFacade {
   CovidRepositoryImpl(this.covidApiService);
 
   @override
-  Future<Either<Response, Exception>> getAll() async {
-   try{
-     var data = await covidApiService.getAllCovidData();
-     return left(data);
-   }
+  Future<Either<Exception, CovidData?>> getAll() async {
+    final data = await covidApiService.getAllCovidData();
+    
   }
 
   @override
-  Future<Either<Response, Exception>> getGlobal() {
+  Future<Either<Exception, Global?>> getGlobal() async{
     // TODO: implement getGlobal
     throw UnimplementedError();
   }
