@@ -32,4 +32,6 @@ class CovidApiService {
 
 
   }
+
+  // TODO(02) : Implement globaldata or is that a subset of
 }
