@@ -17,11 +17,13 @@ class CovidRepositoryImpl implements ICovidRepositoryFacade {
   @override
   Future<Either<Exception, CovidData?>> getAll() async {
     final data = await covidApiService.getAllCovidData();
-    
+    if (data != null) {
+      data.isRight();
+    }
   }
 
   @override
-  Future<Either<Exception, Global?>> getGlobal() async{
+  Future<Either<Exception, Global?>> getGlobal() async {
     // TODO: implement getGlobal
     throw UnimplementedError();
   }
