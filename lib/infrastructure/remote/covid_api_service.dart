@@ -8,23 +8,30 @@ import 'package:injectable/injectable.dart';
 class CovidApiService {
   static var dio = Dio();
 
-  Future<CovidDataDto?> getAllCovidData() async {
+  // Future<CovidDataDto?> getAllCovidData() async {
 
+  //   final response = await dio.get(BASE_URL);
+
+  //   CovidDataDto? data = CovidDataDto.fromJson(response.data);
+
+  //   return data;
+  // }
+
+  Future<Response> getAllCovidData() async {
     final response = await dio.get(BASE_URL);
-
-    CovidDataDto? data = CovidDataDto.fromJson(response.data);
-
-    return data;
+    return response;
   }
 
-  Future<GlobalDto?> getGlobalData() async{
-
-    final response = await dio.get(BASE_URL);
-
-    GlobalDto? data = GlobalDto.fromJson(response.data);
-
-    return data;
-
-    
+  Future<Response> getGlobalData() async{
+     final response = await dio.get(BASE_URL);
+      return response;
   }
-}
+
+//   Future<GlobalDto?> getGlobalData() async {
+//     final response = await dio.get(BASE_URL);
+
+//     GlobalDto? data = GlobalDto.fromJson(response.data);
+
+//     return data;
+//   }
+// }

@@ -1,3 +1,4 @@
+import 'package:dio/dio.dart';
 import 'package:dio/src/response.dart';
 import 'package:dartz/dartz.dart';
 import 'package:flutter_project/domain/repository/i_covid_repository_facade.dart';
@@ -7,13 +8,16 @@ import 'package:injectable/injectable.dart';
 
 @LazySingleton()
 class CovidRepositoryImpl implements ICovidRepositoryFacade {
-   final CovidApiService covidApiService;
+  final CovidApiService covidApiService;
 
   CovidRepositoryImpl(this.covidApiService);
 
   @override
-  Future<Either<Response, Exception>> getAll() {
-    try
+  Future<Either<Response, Exception>> getAll() async {
+   try{
+     var data = await covidApiService.getAllCovidData();
+     return left(data);
+   }
   }
 
   @override
