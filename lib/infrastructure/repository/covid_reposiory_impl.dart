@@ -17,7 +17,7 @@ class CovidRepositoryImpl implements ICovidRepositoryFacade {
   @override
   Future<Either<Exception, CovidData?>> getAll() async {
     final data = await covidApiService.getAllCovidData();
-    //TODO (02): Fold the return 
+    //TODO (02): Fold the return from api service
     if (data != null) {
       data.isRight();
     }
