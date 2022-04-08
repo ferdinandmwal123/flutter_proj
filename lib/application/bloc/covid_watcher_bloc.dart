@@ -1,4 +1,5 @@
 import 'package:bloc/bloc.dart';
+import 'package:flutter_project/domain/models/covid_data.dart';
 import 'package:flutter_project/infrastructure/repository/covid_reposiory_impl.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';
