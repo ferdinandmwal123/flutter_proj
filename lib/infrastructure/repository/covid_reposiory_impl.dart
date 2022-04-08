@@ -5,6 +5,7 @@ import 'package:flutter_project/domain/models/global.dart';
 import 'package:flutter_project/domain/models/covid_data.dart';
 import 'package:flutter_project/domain/repository/i_covid_repository_facade.dart';
 import 'package:flutter_project/infrastructure/dto/covid_data_dtos/covid_data_dto.dart';
+import 'package:flutter_project/infrastructure/dto/dto_mapper.dart';
 import 'package:flutter_project/infrastructure/remote/covid_api_service.dart';
 import 'package:injectable/injectable.dart';
 
@@ -17,15 +18,14 @@ class CovidRepositoryImpl implements ICovidRepositoryFacade {
   @override
   Future<Either<Exception, CovidData?>> getAll() async {
     final data = await covidApiService.getAllCovidData();
-    //TODO (02): Fold the return from api service
-    if (data != null) {
-      data.isRight();
-    }
+    return data.fold(
+      (l) => left(l), 
+      (r) => right(r?.toDomain()));
   }
 
-  @override
-  Future<Either<Exception, Global?>> getGlobal() async {
-    // TODO: implement getGlobal
-    throw UnimplementedError();
-  }
+  // @override
+  // Future<Either<Exception, Global?>> getGlobal() async {
+  //   // TODO: implement getGlobal
+  //   throw UnimplementedError();
+  // }
 }
