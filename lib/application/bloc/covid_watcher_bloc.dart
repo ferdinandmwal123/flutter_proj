@@ -12,7 +12,7 @@ part 'covid_watcher_bloc.freezed.dart';
 @injectable
 class CovidWatcherBloc extends Bloc<CovidWatcherEvent, CovidWatcherState> {
   final CovidRepositoryImpl covidRepositoryImpl;
-  CovidWatcherBloc(this.covidRepositoryImpl) : super(CovidWatcherInitial()) {
+  CovidWatcherBloc(this.covidRepositoryImpl) : super(const CovidWatcherState.initial()) {
     on<CovidWatcherEvent>((event, emit) {
       // TODO: implement event handler
     });
