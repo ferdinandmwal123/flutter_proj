@@ -1,6 +1,8 @@
 part of 'covid_watcher_bloc.dart';
 
-@immutable
-abstract class CovidWatcherState {}
+@freezed
+abstract class CovidWatcherState {
+  
+}
 
-class CovidWatcherInitial extends CovidWatcherState {}
+
