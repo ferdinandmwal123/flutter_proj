@@ -15,6 +15,333 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
+class _$CovidWatcherEventTearOff {
+  const _$CovidWatcherEventTearOff();
+
+  _WatchDataStarted watchDataStarted() {
+    return const _WatchDataStarted();
+  }
+
+  _DataReceived dataReceived(Either<Exception, CovidData?> dataOrException) {
+    return _DataReceived(
+      dataOrException,
+    );
+  }
+}
+
+/// @nodoc
+const $CovidWatcherEvent = _$CovidWatcherEventTearOff();
+
+/// @nodoc
+mixin _$CovidWatcherEvent {
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() watchDataStarted,
+    required TResult Function(Either<Exception, CovidData?> dataOrException)
+        dataReceived,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? watchDataStarted,
+    TResult Function(Either<Exception, CovidData?> dataOrException)?
+        dataReceived,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? watchDataStarted,
+    TResult Function(Either<Exception, CovidData?> dataOrException)?
+        dataReceived,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_WatchDataStarted value) watchDataStarted,
+    required TResult Function(_DataReceived value) dataReceived,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_WatchDataStarted value)? watchDataStarted,
+    TResult Function(_DataReceived value)? dataReceived,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_WatchDataStarted value)? watchDataStarted,
+    TResult Function(_DataReceived value)? dataReceived,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $CovidWatcherEventCopyWith<$Res> {
+  factory $CovidWatcherEventCopyWith(
+          CovidWatcherEvent value, $Res Function(CovidWatcherEvent) then) =
+      _$CovidWatcherEventCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class _$CovidWatcherEventCopyWithImpl<$Res>
+    implements $CovidWatcherEventCopyWith<$Res> {
+  _$CovidWatcherEventCopyWithImpl(this._value, this._then);
+
+  final CovidWatcherEvent _value;
+  // ignore: unused_field
+  final $Res Function(CovidWatcherEvent) _then;
+}
+
+/// @nodoc
+abstract class _$WatchDataStartedCopyWith<$Res> {
+  factory _$WatchDataStartedCopyWith(
+          _WatchDataStarted value, $Res Function(_WatchDataStarted) then) =
+      __$WatchDataStartedCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$WatchDataStartedCopyWithImpl<$Res>
+    extends _$CovidWatcherEventCopyWithImpl<$Res>
+    implements _$WatchDataStartedCopyWith<$Res> {
+  __$WatchDataStartedCopyWithImpl(
+      _WatchDataStarted _value, $Res Function(_WatchDataStarted) _then)
+      : super(_value, (v) => _then(v as _WatchDataStarted));
+
+  @override
+  _WatchDataStarted get _value => super._value as _WatchDataStarted;
+}
+
+/// @nodoc
+
+class _$_WatchDataStarted implements _WatchDataStarted {
+  const _$_WatchDataStarted();
+
+  @override
+  String toString() {
+    return 'CovidWatcherEvent.watchDataStarted()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _WatchDataStarted);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() watchDataStarted,
+    required TResult Function(Either<Exception, CovidData?> dataOrException)
+        dataReceived,
+  }) {
+    return watchDataStarted();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? watchDataStarted,
+    TResult Function(Either<Exception, CovidData?> dataOrException)?
+        dataReceived,
+  }) {
+    return watchDataStarted?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? watchDataStarted,
+    TResult Function(Either<Exception, CovidData?> dataOrException)?
+        dataReceived,
+    required TResult orElse(),
+  }) {
+    if (watchDataStarted != null) {
+      return watchDataStarted();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_WatchDataStarted value) watchDataStarted,
+    required TResult Function(_DataReceived value) dataReceived,
+  }) {
+    return watchDataStarted(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_WatchDataStarted value)? watchDataStarted,
+    TResult Function(_DataReceived value)? dataReceived,
+  }) {
+    return watchDataStarted?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_WatchDataStarted value)? watchDataStarted,
+    TResult Function(_DataReceived value)? dataReceived,
+    required TResult orElse(),
+  }) {
+    if (watchDataStarted != null) {
+      return watchDataStarted(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _WatchDataStarted implements CovidWatcherEvent {
+  const factory _WatchDataStarted() = _$_WatchDataStarted;
+}
+
+/// @nodoc
+abstract class _$DataReceivedCopyWith<$Res> {
+  factory _$DataReceivedCopyWith(
+          _DataReceived value, $Res Function(_DataReceived) then) =
+      __$DataReceivedCopyWithImpl<$Res>;
+  $Res call({Either<Exception, CovidData?> dataOrException});
+}
+
+/// @nodoc
+class __$DataReceivedCopyWithImpl<$Res>
+    extends _$CovidWatcherEventCopyWithImpl<$Res>
+    implements _$DataReceivedCopyWith<$Res> {
+  __$DataReceivedCopyWithImpl(
+      _DataReceived _value, $Res Function(_DataReceived) _then)
+      : super(_value, (v) => _then(v as _DataReceived));
+
+  @override
+  _DataReceived get _value => super._value as _DataReceived;
+
+  @override
+  $Res call({
+    Object? dataOrException = freezed,
+  }) {
+    return _then(_DataReceived(
+      dataOrException == freezed
+          ? _value.dataOrException
+          : dataOrException // ignore: cast_nullable_to_non_nullable
+              as Either<Exception, CovidData?>,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$_DataReceived implements _DataReceived {
+  const _$_DataReceived(this.dataOrException);
+
+  @override
+  final Either<Exception, CovidData?> dataOrException;
+
+  @override
+  String toString() {
+    return 'CovidWatcherEvent.dataReceived(dataOrException: $dataOrException)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _DataReceived &&
+            const DeepCollectionEquality()
+                .equals(other.dataOrException, dataOrException));
+  }
+
+  @override
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(dataOrException));
+
+  @JsonKey(ignore: true)
+  @override
+  _$DataReceivedCopyWith<_DataReceived> get copyWith =>
+      __$DataReceivedCopyWithImpl<_DataReceived>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() watchDataStarted,
+    required TResult Function(Either<Exception, CovidData?> dataOrException)
+        dataReceived,
+  }) {
+    return dataReceived(dataOrException);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? watchDataStarted,
+    TResult Function(Either<Exception, CovidData?> dataOrException)?
+        dataReceived,
+  }) {
+    return dataReceived?.call(dataOrException);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? watchDataStarted,
+    TResult Function(Either<Exception, CovidData?> dataOrException)?
+        dataReceived,
+    required TResult orElse(),
+  }) {
+    if (dataReceived != null) {
+      return dataReceived(dataOrException);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_WatchDataStarted value) watchDataStarted,
+    required TResult Function(_DataReceived value) dataReceived,
+  }) {
+    return dataReceived(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_WatchDataStarted value)? watchDataStarted,
+    TResult Function(_DataReceived value)? dataReceived,
+  }) {
+    return dataReceived?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_WatchDataStarted value)? watchDataStarted,
+    TResult Function(_DataReceived value)? dataReceived,
+    required TResult orElse(),
+  }) {
+    if (dataReceived != null) {
+      return dataReceived(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _DataReceived implements CovidWatcherEvent {
+  const factory _DataReceived(Either<Exception, CovidData?> dataOrException) =
+      _$_DataReceived;
+
+  Either<Exception, CovidData?> get dataOrException;
+  @JsonKey(ignore: true)
+  _$DataReceivedCopyWith<_DataReceived> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
 class _$CovidWatcherStateTearOff {
   const _$CovidWatcherStateTearOff();
 
