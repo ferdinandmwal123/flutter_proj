@@ -4,6 +4,7 @@ import 'package:flutter_project/infrastructure/repository/covid_reposiory_impl.d
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';
 import 'package:meta/meta.dart';
+import 'package:dartz/dartz.dart';
 
 part 'covid_watcher_event.dart';
 part 'covid_watcher_state.dart';

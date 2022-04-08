@@ -1,7 +1,7 @@
 part of 'covid_watcher_bloc.dart';
 
 @freezed
-abstract class CovidWatcherState {
+abstract class CovidWatcherState with _$CovidWatcherState {
   const factory CovidWatcherState.initial() = _Initial;
   const factory CovidWatcherState.loadInProgress() = _LoadInProgress;
   const factory CovidWatcherState.loadSuccess(CovidData? covidData) =
