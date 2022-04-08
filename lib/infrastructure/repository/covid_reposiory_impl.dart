@@ -25,7 +25,7 @@ class CovidRepositoryImpl implements ICovidRepositoryFacade {
 
   // @override
   // Future<Either<Exception, Global?>> getGlobal() async {
-  //   // TODO: implement getGlobal
+
   //   throw UnimplementedError();
   // }
 }
