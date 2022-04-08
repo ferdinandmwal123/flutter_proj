@@ -15,7 +15,8 @@ class CovidWatcherBloc extends Bloc<CovidWatcherEvent, CovidWatcherState> {
   final CovidRepositoryImpl covidRepositoryImpl;
   CovidWatcherBloc(this.covidRepositoryImpl) : super(const CovidWatcherState.initial()) {
     on<CovidWatcherEvent>((event, emit) {
-      // TODO: implement event handler
+      //TODO (Current) : Implement this bloc
+      
     });
   }
 }
