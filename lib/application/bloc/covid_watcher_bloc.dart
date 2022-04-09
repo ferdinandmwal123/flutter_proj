@@ -15,7 +15,12 @@ class CovidWatcherBloc extends Bloc<CovidWatcherEvent, CovidWatcherState> {
   final CovidRepositoryImpl covidRepositoryImpl;
   CovidWatcherBloc(this.covidRepositoryImpl)
       : super(const CovidWatcherState.initial()) {
-    on<_WatchDataStarted>((event, emit) {});
+    on<_WatchDataStarted>((event, emit) async {
+      await Future<void>.delayed(const Duration(seconds: 1));
+
+      emit(const CovidWatcherState.loadInProgress());
+      await covidRepositoryImpl.getAll();
+    });
     on<_DataReceived>((event, emit) {});
   }
 }
