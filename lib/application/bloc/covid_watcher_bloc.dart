@@ -20,10 +20,16 @@ class CovidWatcherBloc extends Bloc<CovidWatcherEvent, CovidWatcherState> {
 
       emit(const CovidWatcherState.loadInProgress());
       final data = await covidRepositoryImpl.getAll();
-      if (data.isLeft() || data.isRight()) { //if data exists
+      if (data.isLeft() || data.isRight()) {
+        //if data exists
         emit(const CovidWatcherState.loadComplete());
       }
     });
-    on<_DataReceived>((event, emit) {});
+    on<_DataReceived>((event, emit) {
+      if (state is _LoadComplete) {
+        final state = this.state as _LoadSuccess;
+        emit(CovidWatcherState.loadSuccess(state.covidData));
+      }
+    });
   }
 }
