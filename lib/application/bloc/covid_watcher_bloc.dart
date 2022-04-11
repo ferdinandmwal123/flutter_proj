@@ -18,7 +18,7 @@ class CovidWatcherBloc extends Bloc<CovidWatcherEvent, CovidWatcherState> {
     // ! WARNING : This BLOC format is unfamiliar possible change to the stream format
     on<_WatchDataStarted>((event, emit) async {
       // await Future<void>.delayed(const Duration(seconds: 1));
-      emit(const CovidWatcherState.loadInProgress());
+      emit(const CovidWatcherState.loadInProgress()); // INFO : == _LoadInProgress();
       final data = await covidRepositoryImpl.getAll();
       add(CovidWatcherEvent.dataReceived(data));
       if (data.isLeft() || data.isRight()) {
