@@ -353,8 +353,10 @@ class _$CovidWatcherStateTearOff {
     return const _LoadInProgress();
   }
 
-  _LoadComplete loadComplete() {
-    return const _LoadComplete();
+  _LoadComplete loadComplete(Either<Exception, CovidData?> data) {
+    return _LoadComplete(
+      data,
+    );
   }
 
   _LoadSuccess loadSuccess(CovidData? covidData) {
@@ -379,7 +381,7 @@ mixin _$CovidWatcherState {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loadInProgress,
-    required TResult Function() loadComplete,
+    required TResult Function(Either<Exception, CovidData?> data) loadComplete,
     required TResult Function(CovidData? covidData) loadSuccess,
     required TResult Function(Exception exception) loadFailure,
   }) =>
@@ -388,7 +390,7 @@ mixin _$CovidWatcherState {
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loadInProgress,
-    TResult Function()? loadComplete,
+    TResult Function(Either<Exception, CovidData?> data)? loadComplete,
     TResult Function(CovidData? covidData)? loadSuccess,
     TResult Function(Exception exception)? loadFailure,
   }) =>
@@ -397,7 +399,7 @@ mixin _$CovidWatcherState {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loadInProgress,
-    TResult Function()? loadComplete,
+    TResult Function(Either<Exception, CovidData?> data)? loadComplete,
     TResult Function(CovidData? covidData)? loadSuccess,
     TResult Function(Exception exception)? loadFailure,
     required TResult orElse(),
@@ -490,7 +492,7 @@ class _$_Initial implements _Initial {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loadInProgress,
-    required TResult Function() loadComplete,
+    required TResult Function(Either<Exception, CovidData?> data) loadComplete,
     required TResult Function(CovidData? covidData) loadSuccess,
     required TResult Function(Exception exception) loadFailure,
   }) {
@@ -502,7 +504,7 @@ class _$_Initial implements _Initial {
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loadInProgress,
-    TResult Function()? loadComplete,
+    TResult Function(Either<Exception, CovidData?> data)? loadComplete,
     TResult Function(CovidData? covidData)? loadSuccess,
     TResult Function(Exception exception)? loadFailure,
   }) {
@@ -514,7 +516,7 @@ class _$_Initial implements _Initial {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loadInProgress,
-    TResult Function()? loadComplete,
+    TResult Function(Either<Exception, CovidData?> data)? loadComplete,
     TResult Function(CovidData? covidData)? loadSuccess,
     TResult Function(Exception exception)? loadFailure,
     required TResult orElse(),
@@ -613,7 +615,7 @@ class _$_LoadInProgress implements _LoadInProgress {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loadInProgress,
-    required TResult Function() loadComplete,
+    required TResult Function(Either<Exception, CovidData?> data) loadComplete,
     required TResult Function(CovidData? covidData) loadSuccess,
     required TResult Function(Exception exception) loadFailure,
   }) {
@@ -625,7 +627,7 @@ class _$_LoadInProgress implements _LoadInProgress {
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loadInProgress,
-    TResult Function()? loadComplete,
+    TResult Function(Either<Exception, CovidData?> data)? loadComplete,
     TResult Function(CovidData? covidData)? loadSuccess,
     TResult Function(Exception exception)? loadFailure,
   }) {
@@ -637,7 +639,7 @@ class _$_LoadInProgress implements _LoadInProgress {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loadInProgress,
-    TResult Function()? loadComplete,
+    TResult Function(Either<Exception, CovidData?> data)? loadComplete,
     TResult Function(CovidData? covidData)? loadSuccess,
     TResult Function(Exception exception)? loadFailure,
     required TResult orElse(),
@@ -698,6 +700,7 @@ abstract class _$LoadCompleteCopyWith<$Res> {
   factory _$LoadCompleteCopyWith(
           _LoadComplete value, $Res Function(_LoadComplete) then) =
       __$LoadCompleteCopyWithImpl<$Res>;
+  $Res call({Either<Exception, CovidData?> data});
 }
 
 /// @nodoc
@@ -710,37 +713,60 @@ class __$LoadCompleteCopyWithImpl<$Res>
 
   @override
   _LoadComplete get _value => super._value as _LoadComplete;
+
+  @override
+  $Res call({
+    Object? data = freezed,
+  }) {
+    return _then(_LoadComplete(
+      data == freezed
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as Either<Exception, CovidData?>,
+    ));
+  }
 }
 
 /// @nodoc
 
 class _$_LoadComplete implements _LoadComplete {
-  const _$_LoadComplete();
+  const _$_LoadComplete(this.data);
+
+  @override
+  final Either<Exception, CovidData?> data;
 
   @override
   String toString() {
-    return 'CovidWatcherState.loadComplete()';
+    return 'CovidWatcherState.loadComplete(data: $data)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _LoadComplete);
+        (other.runtimeType == runtimeType &&
+            other is _LoadComplete &&
+            const DeepCollectionEquality().equals(other.data, data));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(data));
+
+  @JsonKey(ignore: true)
+  @override
+  _$LoadCompleteCopyWith<_LoadComplete> get copyWith =>
+      __$LoadCompleteCopyWithImpl<_LoadComplete>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loadInProgress,
-    required TResult Function() loadComplete,
+    required TResult Function(Either<Exception, CovidData?> data) loadComplete,
     required TResult Function(CovidData? covidData) loadSuccess,
     required TResult Function(Exception exception) loadFailure,
   }) {
-    return loadComplete();
+    return loadComplete(data);
   }
 
   @override
@@ -748,11 +774,11 @@ class _$_LoadComplete implements _LoadComplete {
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loadInProgress,
-    TResult Function()? loadComplete,
+    TResult Function(Either<Exception, CovidData?> data)? loadComplete,
     TResult Function(CovidData? covidData)? loadSuccess,
     TResult Function(Exception exception)? loadFailure,
   }) {
-    return loadComplete?.call();
+    return loadComplete?.call(data);
   }
 
   @override
@@ -760,13 +786,13 @@ class _$_LoadComplete implements _LoadComplete {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loadInProgress,
-    TResult Function()? loadComplete,
+    TResult Function(Either<Exception, CovidData?> data)? loadComplete,
     TResult Function(CovidData? covidData)? loadSuccess,
     TResult Function(Exception exception)? loadFailure,
     required TResult orElse(),
   }) {
     if (loadComplete != null) {
-      return loadComplete();
+      return loadComplete(data);
     }
     return orElse();
   }
@@ -813,7 +839,13 @@ class _$_LoadComplete implements _LoadComplete {
 }
 
 abstract class _LoadComplete implements CovidWatcherState {
-  const factory _LoadComplete() = _$_LoadComplete;
+  const factory _LoadComplete(Either<Exception, CovidData?> data) =
+      _$_LoadComplete;
+
+  Either<Exception, CovidData?> get data;
+  @JsonKey(ignore: true)
+  _$LoadCompleteCopyWith<_LoadComplete> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -896,7 +928,7 @@ class _$_LoadSuccess implements _LoadSuccess {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loadInProgress,
-    required TResult Function() loadComplete,
+    required TResult Function(Either<Exception, CovidData?> data) loadComplete,
     required TResult Function(CovidData? covidData) loadSuccess,
     required TResult Function(Exception exception) loadFailure,
   }) {
@@ -908,7 +940,7 @@ class _$_LoadSuccess implements _LoadSuccess {
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loadInProgress,
-    TResult Function()? loadComplete,
+    TResult Function(Either<Exception, CovidData?> data)? loadComplete,
     TResult Function(CovidData? covidData)? loadSuccess,
     TResult Function(Exception exception)? loadFailure,
   }) {
@@ -920,7 +952,7 @@ class _$_LoadSuccess implements _LoadSuccess {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loadInProgress,
-    TResult Function()? loadComplete,
+    TResult Function(Either<Exception, CovidData?> data)? loadComplete,
     TResult Function(CovidData? covidData)? loadSuccess,
     TResult Function(Exception exception)? loadFailure,
     required TResult orElse(),
@@ -1048,7 +1080,7 @@ class _$_LoadFailure implements _LoadFailure {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loadInProgress,
-    required TResult Function() loadComplete,
+    required TResult Function(Either<Exception, CovidData?> data) loadComplete,
     required TResult Function(CovidData? covidData) loadSuccess,
     required TResult Function(Exception exception) loadFailure,
   }) {
@@ -1060,7 +1092,7 @@ class _$_LoadFailure implements _LoadFailure {
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loadInProgress,
-    TResult Function()? loadComplete,
+    TResult Function(Either<Exception, CovidData?> data)? loadComplete,
     TResult Function(CovidData? covidData)? loadSuccess,
     TResult Function(Exception exception)? loadFailure,
   }) {
@@ -1072,7 +1104,7 @@ class _$_LoadFailure implements _LoadFailure {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loadInProgress,
-    TResult Function()? loadComplete,
+    TResult Function(Either<Exception, CovidData?> data)? loadComplete,
     TResult Function(CovidData? covidData)? loadSuccess,
     TResult Function(Exception exception)? loadFailure,
     required TResult orElse(),
