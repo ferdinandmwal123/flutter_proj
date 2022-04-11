@@ -20,11 +20,9 @@ class CovidWatcherBloc extends Bloc<CovidWatcherEvent, CovidWatcherState> {
 
       emit(const CovidWatcherState.loadInProgress());
       final data = await covidRepositoryImpl.getAll();
-
-
     });
     on<_DataReceived>((event, emit) {
-      //TODO (Current) : Once data is received fold left and emit failure or right and give data
-    });
+        
+        });
   }
 }

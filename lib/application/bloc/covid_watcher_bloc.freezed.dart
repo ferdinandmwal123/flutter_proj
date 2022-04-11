@@ -353,6 +353,10 @@ class _$CovidWatcherStateTearOff {
     return const _LoadInProgress();
   }
 
+  _LoadComplete loadComplete() {
+    return const _LoadComplete();
+  }
+
   _LoadSuccess loadSuccess(CovidData? covidData) {
     return _LoadSuccess(
       covidData,
@@ -375,6 +379,7 @@ mixin _$CovidWatcherState {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loadInProgress,
+    required TResult Function() loadComplete,
     required TResult Function(CovidData? covidData) loadSuccess,
     required TResult Function(Exception exception) loadFailure,
   }) =>
@@ -383,6 +388,7 @@ mixin _$CovidWatcherState {
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loadInProgress,
+    TResult Function()? loadComplete,
     TResult Function(CovidData? covidData)? loadSuccess,
     TResult Function(Exception exception)? loadFailure,
   }) =>
@@ -391,6 +397,7 @@ mixin _$CovidWatcherState {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loadInProgress,
+    TResult Function()? loadComplete,
     TResult Function(CovidData? covidData)? loadSuccess,
     TResult Function(Exception exception)? loadFailure,
     required TResult orElse(),
@@ -400,6 +407,7 @@ mixin _$CovidWatcherState {
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
     required TResult Function(_LoadInProgress value) loadInProgress,
+    required TResult Function(_LoadComplete value) loadComplete,
     required TResult Function(_LoadSuccess value) loadSuccess,
     required TResult Function(_LoadFailure value) loadFailure,
   }) =>
@@ -408,6 +416,7 @@ mixin _$CovidWatcherState {
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(_LoadInProgress value)? loadInProgress,
+    TResult Function(_LoadComplete value)? loadComplete,
     TResult Function(_LoadSuccess value)? loadSuccess,
     TResult Function(_LoadFailure value)? loadFailure,
   }) =>
@@ -416,6 +425,7 @@ mixin _$CovidWatcherState {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(_LoadInProgress value)? loadInProgress,
+    TResult Function(_LoadComplete value)? loadComplete,
     TResult Function(_LoadSuccess value)? loadSuccess,
     TResult Function(_LoadFailure value)? loadFailure,
     required TResult orElse(),
@@ -480,6 +490,7 @@ class _$_Initial implements _Initial {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loadInProgress,
+    required TResult Function() loadComplete,
     required TResult Function(CovidData? covidData) loadSuccess,
     required TResult Function(Exception exception) loadFailure,
   }) {
@@ -491,6 +502,7 @@ class _$_Initial implements _Initial {
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loadInProgress,
+    TResult Function()? loadComplete,
     TResult Function(CovidData? covidData)? loadSuccess,
     TResult Function(Exception exception)? loadFailure,
   }) {
@@ -502,6 +514,7 @@ class _$_Initial implements _Initial {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loadInProgress,
+    TResult Function()? loadComplete,
     TResult Function(CovidData? covidData)? loadSuccess,
     TResult Function(Exception exception)? loadFailure,
     required TResult orElse(),
@@ -517,6 +530,7 @@ class _$_Initial implements _Initial {
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
     required TResult Function(_LoadInProgress value) loadInProgress,
+    required TResult Function(_LoadComplete value) loadComplete,
     required TResult Function(_LoadSuccess value) loadSuccess,
     required TResult Function(_LoadFailure value) loadFailure,
   }) {
@@ -528,6 +542,7 @@ class _$_Initial implements _Initial {
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(_LoadInProgress value)? loadInProgress,
+    TResult Function(_LoadComplete value)? loadComplete,
     TResult Function(_LoadSuccess value)? loadSuccess,
     TResult Function(_LoadFailure value)? loadFailure,
   }) {
@@ -539,6 +554,7 @@ class _$_Initial implements _Initial {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(_LoadInProgress value)? loadInProgress,
+    TResult Function(_LoadComplete value)? loadComplete,
     TResult Function(_LoadSuccess value)? loadSuccess,
     TResult Function(_LoadFailure value)? loadFailure,
     required TResult orElse(),
@@ -597,6 +613,7 @@ class _$_LoadInProgress implements _LoadInProgress {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loadInProgress,
+    required TResult Function() loadComplete,
     required TResult Function(CovidData? covidData) loadSuccess,
     required TResult Function(Exception exception) loadFailure,
   }) {
@@ -608,6 +625,7 @@ class _$_LoadInProgress implements _LoadInProgress {
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loadInProgress,
+    TResult Function()? loadComplete,
     TResult Function(CovidData? covidData)? loadSuccess,
     TResult Function(Exception exception)? loadFailure,
   }) {
@@ -619,6 +637,7 @@ class _$_LoadInProgress implements _LoadInProgress {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loadInProgress,
+    TResult Function()? loadComplete,
     TResult Function(CovidData? covidData)? loadSuccess,
     TResult Function(Exception exception)? loadFailure,
     required TResult orElse(),
@@ -634,6 +653,7 @@ class _$_LoadInProgress implements _LoadInProgress {
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
     required TResult Function(_LoadInProgress value) loadInProgress,
+    required TResult Function(_LoadComplete value) loadComplete,
     required TResult Function(_LoadSuccess value) loadSuccess,
     required TResult Function(_LoadFailure value) loadFailure,
   }) {
@@ -645,6 +665,7 @@ class _$_LoadInProgress implements _LoadInProgress {
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(_LoadInProgress value)? loadInProgress,
+    TResult Function(_LoadComplete value)? loadComplete,
     TResult Function(_LoadSuccess value)? loadSuccess,
     TResult Function(_LoadFailure value)? loadFailure,
   }) {
@@ -656,6 +677,7 @@ class _$_LoadInProgress implements _LoadInProgress {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(_LoadInProgress value)? loadInProgress,
+    TResult Function(_LoadComplete value)? loadComplete,
     TResult Function(_LoadSuccess value)? loadSuccess,
     TResult Function(_LoadFailure value)? loadFailure,
     required TResult orElse(),
@@ -669,6 +691,129 @@ class _$_LoadInProgress implements _LoadInProgress {
 
 abstract class _LoadInProgress implements CovidWatcherState {
   const factory _LoadInProgress() = _$_LoadInProgress;
+}
+
+/// @nodoc
+abstract class _$LoadCompleteCopyWith<$Res> {
+  factory _$LoadCompleteCopyWith(
+          _LoadComplete value, $Res Function(_LoadComplete) then) =
+      __$LoadCompleteCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$LoadCompleteCopyWithImpl<$Res>
+    extends _$CovidWatcherStateCopyWithImpl<$Res>
+    implements _$LoadCompleteCopyWith<$Res> {
+  __$LoadCompleteCopyWithImpl(
+      _LoadComplete _value, $Res Function(_LoadComplete) _then)
+      : super(_value, (v) => _then(v as _LoadComplete));
+
+  @override
+  _LoadComplete get _value => super._value as _LoadComplete;
+}
+
+/// @nodoc
+
+class _$_LoadComplete implements _LoadComplete {
+  const _$_LoadComplete();
+
+  @override
+  String toString() {
+    return 'CovidWatcherState.loadComplete()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _LoadComplete);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loadInProgress,
+    required TResult Function() loadComplete,
+    required TResult Function(CovidData? covidData) loadSuccess,
+    required TResult Function(Exception exception) loadFailure,
+  }) {
+    return loadComplete();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loadInProgress,
+    TResult Function()? loadComplete,
+    TResult Function(CovidData? covidData)? loadSuccess,
+    TResult Function(Exception exception)? loadFailure,
+  }) {
+    return loadComplete?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loadInProgress,
+    TResult Function()? loadComplete,
+    TResult Function(CovidData? covidData)? loadSuccess,
+    TResult Function(Exception exception)? loadFailure,
+    required TResult orElse(),
+  }) {
+    if (loadComplete != null) {
+      return loadComplete();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_LoadInProgress value) loadInProgress,
+    required TResult Function(_LoadComplete value) loadComplete,
+    required TResult Function(_LoadSuccess value) loadSuccess,
+    required TResult Function(_LoadFailure value) loadFailure,
+  }) {
+    return loadComplete(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_LoadInProgress value)? loadInProgress,
+    TResult Function(_LoadComplete value)? loadComplete,
+    TResult Function(_LoadSuccess value)? loadSuccess,
+    TResult Function(_LoadFailure value)? loadFailure,
+  }) {
+    return loadComplete?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_LoadInProgress value)? loadInProgress,
+    TResult Function(_LoadComplete value)? loadComplete,
+    TResult Function(_LoadSuccess value)? loadSuccess,
+    TResult Function(_LoadFailure value)? loadFailure,
+    required TResult orElse(),
+  }) {
+    if (loadComplete != null) {
+      return loadComplete(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _LoadComplete implements CovidWatcherState {
+  const factory _LoadComplete() = _$_LoadComplete;
 }
 
 /// @nodoc
@@ -751,6 +896,7 @@ class _$_LoadSuccess implements _LoadSuccess {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loadInProgress,
+    required TResult Function() loadComplete,
     required TResult Function(CovidData? covidData) loadSuccess,
     required TResult Function(Exception exception) loadFailure,
   }) {
@@ -762,6 +908,7 @@ class _$_LoadSuccess implements _LoadSuccess {
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loadInProgress,
+    TResult Function()? loadComplete,
     TResult Function(CovidData? covidData)? loadSuccess,
     TResult Function(Exception exception)? loadFailure,
   }) {
@@ -773,6 +920,7 @@ class _$_LoadSuccess implements _LoadSuccess {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loadInProgress,
+    TResult Function()? loadComplete,
     TResult Function(CovidData? covidData)? loadSuccess,
     TResult Function(Exception exception)? loadFailure,
     required TResult orElse(),
@@ -788,6 +936,7 @@ class _$_LoadSuccess implements _LoadSuccess {
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
     required TResult Function(_LoadInProgress value) loadInProgress,
+    required TResult Function(_LoadComplete value) loadComplete,
     required TResult Function(_LoadSuccess value) loadSuccess,
     required TResult Function(_LoadFailure value) loadFailure,
   }) {
@@ -799,6 +948,7 @@ class _$_LoadSuccess implements _LoadSuccess {
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(_LoadInProgress value)? loadInProgress,
+    TResult Function(_LoadComplete value)? loadComplete,
     TResult Function(_LoadSuccess value)? loadSuccess,
     TResult Function(_LoadFailure value)? loadFailure,
   }) {
@@ -810,6 +960,7 @@ class _$_LoadSuccess implements _LoadSuccess {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(_LoadInProgress value)? loadInProgress,
+    TResult Function(_LoadComplete value)? loadComplete,
     TResult Function(_LoadSuccess value)? loadSuccess,
     TResult Function(_LoadFailure value)? loadFailure,
     required TResult orElse(),
@@ -897,6 +1048,7 @@ class _$_LoadFailure implements _LoadFailure {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loadInProgress,
+    required TResult Function() loadComplete,
     required TResult Function(CovidData? covidData) loadSuccess,
     required TResult Function(Exception exception) loadFailure,
   }) {
@@ -908,6 +1060,7 @@ class _$_LoadFailure implements _LoadFailure {
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loadInProgress,
+    TResult Function()? loadComplete,
     TResult Function(CovidData? covidData)? loadSuccess,
     TResult Function(Exception exception)? loadFailure,
   }) {
@@ -919,6 +1072,7 @@ class _$_LoadFailure implements _LoadFailure {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loadInProgress,
+    TResult Function()? loadComplete,
     TResult Function(CovidData? covidData)? loadSuccess,
     TResult Function(Exception exception)? loadFailure,
     required TResult orElse(),
@@ -934,6 +1088,7 @@ class _$_LoadFailure implements _LoadFailure {
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
     required TResult Function(_LoadInProgress value) loadInProgress,
+    required TResult Function(_LoadComplete value) loadComplete,
     required TResult Function(_LoadSuccess value) loadSuccess,
     required TResult Function(_LoadFailure value) loadFailure,
   }) {
@@ -945,6 +1100,7 @@ class _$_LoadFailure implements _LoadFailure {
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(_LoadInProgress value)? loadInProgress,
+    TResult Function(_LoadComplete value)? loadComplete,
     TResult Function(_LoadSuccess value)? loadSuccess,
     TResult Function(_LoadFailure value)? loadFailure,
   }) {
@@ -956,6 +1112,7 @@ class _$_LoadFailure implements _LoadFailure {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(_LoadInProgress value)? loadInProgress,
+    TResult Function(_LoadComplete value)? loadComplete,
     TResult Function(_LoadSuccess value)? loadSuccess,
     TResult Function(_LoadFailure value)? loadFailure,
     required TResult orElse(),
