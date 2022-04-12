@@ -11,7 +11,7 @@ class SplashPage extends StatelessWidget {
       listener: (context, state) {
         state.map(
             initial: (_) => {},
-            loadInProgress: loadInProgress,
+            loadInProgress: (_) => {},
             loadComplete: loadComplete,
             loadSuccess: loadSuccess,
             loadFailure: (_) => {});
