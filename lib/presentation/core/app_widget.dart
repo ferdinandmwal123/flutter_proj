@@ -8,6 +8,13 @@ class AppWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp();
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider(
+          create: (context) =>
+              getIt<CovidWatcherBloc>()..add(const CovidWatcherEvent.watchDataStarted()),
+        )
+        
+      ], child: MaterialApp()); 
   }
 }
