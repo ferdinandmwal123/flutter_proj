@@ -8,6 +8,6 @@ class AppWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(); //TODO (Current) : Set the routing no bloc needed
+    return const MaterialApp(); //TODO (Current) : Set the routing no blocprovider needed here
   }
 }
