@@ -1,13 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_project/application/bloc/covid_watcher_bloc.dart';
-import 'package:flutter_project/injection.dart';
+import 'package:flutter_project/presentation/routes/router.gr.dart';
 
 class AppWidget extends StatelessWidget {
-  const AppWidget({Key? key}) : super(key: key);
+  AppWidget({Key? key}) : super(key: key);
+  final _appRouter = AppRouter();
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(); //TODO (Current) : Set the routing no blocprovider needed here
+    return  MaterialApp.router(
+      routerDelegate: _appRouter.delegate(),
+      routeInformationParser: _appRouter.defaultRouteParser(),
+      title: 'Covid',
+      debugShowCheckedModeBanner: false,
+      // TODO(current) : theme: , 
+    );
   }
 }
