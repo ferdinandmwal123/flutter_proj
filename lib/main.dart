@@ -9,10 +9,10 @@ void main() async {
   configureDependencies();
   //* INFO: flutter_native_splash
   await initialization(null);
-  runApp(const AppWidget());
+  runApp( AppWidget());
 }
 
 Future initialization(BuildContext? context) async {
   // you can do stuff here
-  await Future.delayed(Duration(seconds: 3));
+  await Future.delayed(const Duration(seconds: 3));
 }
