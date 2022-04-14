@@ -8,14 +8,14 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return AutoTabsScaffold(
+    return AutoTabsScaffold(//TODO(Current) : Fix this!
+      routes: const [OverviewRouter(), AboutRouter(), PreventRouter()],
       appBarBuilder: (_, tabsRouter) => AppBar(
         backgroundColor: Colors.amber,
         title: const Text('Covid'),
         centerTitle: true,
         leading: const AutoBackButton(),
       ),
-      routes: const [OverviewRouter(), AboutRouter(), PreventRouter()],
       bottomNavigationBuilder: (_, tabsRouter) {
         return SalomonBottomBar(
           margin: const EdgeInsets.symmetric(
