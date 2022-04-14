@@ -12,6 +12,8 @@ class AppWidget extends StatelessWidget {
       routeInformationParser: _appRouter.defaultRouteParser(),
       title: 'Covid',
       debugShowCheckedModeBanner: false,
+      theme: ThemeData(visualDensity : VisualDensity.adaptivePlatformDensity),
+      
       
     );
   }
