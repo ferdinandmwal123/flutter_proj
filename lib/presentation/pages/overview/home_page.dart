@@ -8,7 +8,7 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return AutoTabsScaffold(//TODO(Current) : Fix this!
+    return AutoTabsScaffold( //TODO(Current) : Issue is with autoroute not splash
       routes: const [OverviewRouter(), AboutRouter(), PreventRouter()],
       appBarBuilder: (_, tabsRouter) => AppBar(
         backgroundColor: Colors.amber,

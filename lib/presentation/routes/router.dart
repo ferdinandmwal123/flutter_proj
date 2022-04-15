@@ -12,10 +12,8 @@ import 'package:flutter_project/presentation/pages/prevent_page.dart';
       AutoRoute(
           path: 'overview',
           name: 'OverviewRouter',
-          page: EmptyRouterPage,
-          children: [
-            AutoRoute(path: '', page: OverviewPage)
-          ]
+          page:  OverviewPage,
+         
           )
     ]),
     AutoRoute(
