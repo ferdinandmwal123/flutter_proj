@@ -25,7 +25,7 @@ class AppRouter extends _i4.RootStackRouter {
   @override
   final Map<String, _i4.PageFactory> pagesMap = {
     HomeRoute.name: (routeData) {
-      return _i4.MaterialPageX<dynamic>(
+      return _i4.MaterialPageX<String>(
           routeData: routeData, child: const _i1.HomePage());
     },
     AboutRouter.name: (routeData) {
@@ -49,6 +49,11 @@ class AppRouter extends _i4.RootStackRouter {
   @override
   List<_i4.RouteConfig> get routes => [
         _i4.RouteConfig(HomeRoute.name, path: '/', children: [
+          _i4.RouteConfig('#redirect',
+              path: '',
+              parent: HomeRoute.name,
+              redirectTo: 'overview',
+              fullMatch: true),
           _i4.RouteConfig(OverviewRouter.name,
               path: 'overview',
               parent: HomeRoute.name,
