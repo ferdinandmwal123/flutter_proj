@@ -12,7 +12,9 @@ class AppWidget extends StatelessWidget {
       routeInformationParser: _appRouter.defaultRouteParser(),
       title: 'Covid',
       debugShowCheckedModeBanner: false,
-      // TODO(current) : theme: , 
+      theme: ThemeData(visualDensity : VisualDensity.adaptivePlatformDensity),
+      
+      
     );
   }
 }
