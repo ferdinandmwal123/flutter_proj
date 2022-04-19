@@ -3,7 +3,7 @@ import 'package:flutter_project/injection.dart';
 import 'package:flutter_project/presentation/core/app_widget.dart';
 import 'package:injectable/injectable.dart';
 
-void main() async { //TODO (Current): This async is the problem
+void main()  async{ 
   //*INFO:  the plugin needs to use platform channels to call the native code, which is done asynchronously therefore you have to call ensureInitialized() to make sure that you have an instance of the WidgetsBinding.
   WidgetsFlutterBinding.ensureInitialized();
   configureDependencies();
