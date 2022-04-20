@@ -8,15 +8,10 @@ import 'package:flutter_project/presentation/pages/prevent_page.dart';
 @MaterialAutoRouter(
   replaceInRouteName: 'Page,Route',
   routes: <AutoRoute>[
-    AutoRoute(path: '/', page: HomePage, initial: true, children: [
-      AutoRoute(
-          path: 'overview',
-          name: 'OverviewRouter',
-          page: EmptyRouterPage,
-          children: [
-            AutoRoute(path: '', page: OverviewPage)
-          ])
-    ]),
+    AutoRoute(
+        page: HomePage,
+        initial: true,
+        children: [AutoRoute(page: OverviewPage)]),
     AutoRoute(page: AboutPage),
     AutoRoute(page: PreventPage)
   ],
