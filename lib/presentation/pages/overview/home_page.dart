@@ -9,8 +9,11 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AutoTabsScaffold(
-      
-      routes: [OverviewRouter(), AboutRouter(), PreventRouter()],//TODO(Current): This is the issue (Bad state no element)
+      routes: const[
+        HomeRoute(),
+        AboutRoute(),
+        PreventRoute()
+      ], //TODO(Current): This is the issue (Bad state no element)
       appBarBuilder: (_, tabsRouter) => AppBar(
         backgroundColor: Colors.amber,
         title: const Text('Covid'),
