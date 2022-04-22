@@ -33,7 +33,7 @@ class CountryDropDown extends StatelessWidget {
                       
                 ),
                 const SizedBox(width: 8.0,),
-                Text(e, style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),)
+                Text(e, style: const TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),)
               ],
             ),
             value: e,
