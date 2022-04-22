@@ -1,9 +1,6 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 
 import 'overview/widgets/country_dropdown.dart';
-import 'overview/widgets/custom_appbar_widget.dart';
 
 class OverviewPage extends StatefulWidget {
   const OverviewPage({Key? key}) : super(key: key);
@@ -18,7 +15,7 @@ class _OverviewPageState extends State<OverviewPage> {
   Widget build(BuildContext context) {
     final screenHeight = MediaQuery.of(context).size.height;
     return CustomScrollView(
-      physics: ClampingScrollPhysics(),
+      physics: const ClampingScrollPhysics(),
       slivers: [_buildHeader(screenHeight)],
     );
   }
