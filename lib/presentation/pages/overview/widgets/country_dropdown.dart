@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class CountryDropDown extends StatelessWidget {
   final List<String> countries;
-  final String country;
+  final String? country;
   final Function(String?) onChanged;
   const CountryDropDown(
       {Key? key,
