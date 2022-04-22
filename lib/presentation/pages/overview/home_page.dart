@@ -10,7 +10,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return AutoTabsScaffold(
       routes: const[
-        // HomeRoute(),
+        HomeRoute(),
         AboutRoute(),
         PreventRoute()
       ], //TODO(Current): This is the issue (Bad state no element)
