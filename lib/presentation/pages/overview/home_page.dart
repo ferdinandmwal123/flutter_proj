@@ -35,7 +35,7 @@ class HomePage extends StatelessWidget {
                 Icons.home,
                 size: 30,
               ),
-              title: const Text('Posts'),
+              title: const Text('Home'),
             ),
             SalomonBottomBarItem(
               selectedColor: Colors.blue[200],
@@ -43,7 +43,7 @@ class HomePage extends StatelessWidget {
                 Icons.insert_chart,
                 size: 30,
               ),
-              title: const Text('Users'),
+              title: const Text('About'),
             ),
             SalomonBottomBarItem(
               selectedColor: Colors.pinkAccent[100],
@@ -51,7 +51,7 @@ class HomePage extends StatelessWidget {
                 Icons.info,
                 size: 30,
               ),
-              title: const Text('Settings'),
+              title: const Text('Prevent'),
             ),
           ],
         );
