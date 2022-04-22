@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 
+import 'overview/widgets/country_dropdown.dart';
 import 'overview/widgets/custom_appbar_widget.dart';
 
 class OverviewPage extends StatefulWidget {
@@ -12,6 +13,7 @@ class OverviewPage extends StatefulWidget {
 }
 
 class _OverviewPageState extends State<OverviewPage> {
+  String _country = 'USA';
   @override
   Widget build(BuildContext context) {
     final screenHeight = MediaQuery.of(context).size.height;
@@ -34,14 +36,19 @@ class _OverviewPageState extends State<OverviewPage> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Row(
-              children: const [
-                Text(
+              children: [
+                const Text(
                   'COVID-19',
                   style: TextStyle(
                       color: Colors.white,
                       fontSize: 25.0,
                       fontWeight: FontWeight.bold),
-                )
+                ),
+                CountryDropDown(
+                  countries: const ['CN', 'FR', 'IN', 'IT', 'UK', 'USA'],
+                  country: _country,
+                  onChanged: (val) => setState(() => _country = val),
+                ),
               ],
             )
           ],
