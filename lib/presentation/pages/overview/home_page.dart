@@ -1,5 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_project/presentation/pages/overview/widgets/custom_appbar_widget.dart';
 import 'package:flutter_project/presentation/routes/router.gr.dart';
 import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
 
@@ -14,12 +15,7 @@ class HomePage extends StatelessWidget {
         AboutRouter(),
         PreventRouter()
       ], 
-      appBarBuilder: (_, tabsRouter) => AppBar(
-        backgroundColor: Colors.amber,
-        title: const Text('Covid'),
-        centerTitle: true,
-        leading: const AutoBackButton(),
-      ),
+      appBarBuilder: (_, tabsRouter) => CustomAppBar(),
       bottomNavigationBuilder: (_, tabsRouter) {
         return SalomonBottomBar(
           margin: const EdgeInsets.symmetric(
