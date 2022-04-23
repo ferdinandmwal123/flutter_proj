@@ -15,7 +15,7 @@ class CountryDropDown extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 12.0),
-      height: 14.0,
+      height: 30.0,
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(30.0),
