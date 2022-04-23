@@ -8,12 +8,15 @@ void main()  async{
   WidgetsFlutterBinding.ensureInitialized();
   configureDependencies();
   //* INFO: flutter_native_splash
-  await initialization(null);
+  // await initialization(null);
   runApp(AppWidget());
 }
 
-Future initialization(BuildContext? context) async {
-  // you can do stuff here
-  await Future.delayed(const Duration(seconds: 3));
-  // FlutterNativeSplash.remove();
-}
+// Future initialization(BuildContext? context) async {
+//   // you can do stuff here
+//   await Future.delayed(const Duration(seconds: 3));
+//   // FlutterNativeSplash.remove();
+// }
+
+//TODO(02) : Add Flutter Native splash
+//TODO(Current): Fix assets

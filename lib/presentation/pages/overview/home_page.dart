@@ -1,5 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_project/presentation/pages/overview/widgets/custom_appbar_widget.dart';
 import 'package:flutter_project/presentation/routes/router.gr.dart';
 import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
 
@@ -9,14 +10,12 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AutoTabsScaffold(
-      
-      routes: [OverviewRouter(), AboutRouter(), PreventRouter()],//TODO(Current): This is the issue (Bad state no element)
-      appBarBuilder: (_, tabsRouter) => AppBar(
-        backgroundColor: Colors.amber,
-        title: const Text('Covid'),
-        centerTitle: true,
-        leading: const AutoBackButton(),
-      ),
+      routes: const[
+        OverviewRouter(),
+        AboutRouter(),
+        PreventRouter()
+      ], 
+      appBarBuilder: (_, tabsRouter) => CustomAppBar(),
       bottomNavigationBuilder: (_, tabsRouter) {
         return SalomonBottomBar(
           margin: const EdgeInsets.symmetric(
@@ -32,23 +31,23 @@ class HomePage extends StatelessWidget {
                 Icons.home,
                 size: 30,
               ),
-              title: const Text('Posts'),
+              title: const Text('Home'),
             ),
             SalomonBottomBarItem(
               selectedColor: Colors.blue[200],
               icon: const Icon(
-                Icons.insert_chart,
+                Icons.info,
                 size: 30,
               ),
-              title: const Text('Users'),
+              title: const Text('About'),
             ),
             SalomonBottomBarItem(
               selectedColor: Colors.pinkAccent[100],
               icon: const Icon(
-                Icons.info,
+                Icons.close,
                 size: 30,
               ),
-              title: const Text('Settings'),
+              title: const Text('Prevent'),
             ),
           ],
         );
