@@ -16,7 +16,7 @@ class _OverviewPageState extends State<OverviewPage> {
     final screenHeight = MediaQuery.of(context).size.height;
     return CustomScrollView(
       physics: const ClampingScrollPhysics(),
-      slivers: [_buildHeader(screenHeight)],
+      slivers: [_buildHeader(screenHeight), _buildCounter(screenHeight)],
     );
   }
 
@@ -131,6 +131,18 @@ class _OverviewPageState extends State<OverviewPage> {
               ],
             )
           ],
+        ),
+      ),
+    );
+  }
+
+  SliverToBoxAdapter _buildCounter(double screenHeight) {
+    return SliverToBoxAdapter(
+      child: Container(
+        height: 300,
+        width: double.infinity,
+        decoration: BoxDecoration(
+          color: Colors.green
         ),
       ),
     );
