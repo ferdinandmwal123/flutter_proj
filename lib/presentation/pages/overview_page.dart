@@ -78,16 +78,17 @@ class _OverviewPageState extends State<OverviewPage> {
                 Row(
                   children: [
                     TextButton.icon(
-                        onPressed: () {},
-                        icon: const Icon(
-                          Icons.phone,
-                          color: Colors.white,
-                        ),
-                        label: const Text(
-                          'Call Now',
-                          style: TextStyle(
-                              fontSize: 16.0, fontWeight: FontWeight.w600),
-                        ))
+                      onPressed: () {},
+                      icon: const Icon(
+                        Icons.phone,
+                        color: Colors.white,
+                      ),
+                      label: const Text(
+                        'Call Now',
+                        style: TextStyle(
+                            fontSize: 16.0, fontWeight: FontWeight.w600),
+                      ),
+                    )
                   ],
                 )
               ],
