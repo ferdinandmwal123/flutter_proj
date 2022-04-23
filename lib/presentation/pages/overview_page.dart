@@ -25,7 +25,7 @@ class _OverviewPageState extends State<OverviewPage> {
       child: Container(
         padding: const EdgeInsets.all(20.0),
         decoration: const BoxDecoration(
-            color: Colors.blueAccent,
+            color: Color(0xFF473F97),
             borderRadius: BorderRadius.only(
                 bottomLeft: Radius.circular(40.0),
                 bottomRight: Radius.circular(40.0))),
@@ -66,10 +66,10 @@ class _OverviewPageState extends State<OverviewPage> {
                   height: screenHeight * 0.01,
                 ),
                 const Text(
-                  "If you have any COVID-19 symptoms, please call or text us immediately",
+                  "If you have any COVID-19 symptoms, please call or text us immediately for medical help",
                   style: TextStyle(
                       color: Colors.white70,
-                      fontSize: 22.0,
+                      fontSize: 18.0,
                       fontWeight: FontWeight.w600),
                 ),
                 SizedBox(
@@ -109,7 +109,7 @@ class _OverviewPageState extends State<OverviewPage> {
                                   const EdgeInsets.symmetric(
                                       vertical: 10.0, horizontal: 20.0)),
                           backgroundColor:
-                              MaterialStateProperty.all<Color>(Colors.greenAccent),
+                              MaterialStateProperty.all<Color>(Colors.blue),
                           shape: MaterialStateProperty.all<OutlinedBorder>(
                               RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(30.0)))),
