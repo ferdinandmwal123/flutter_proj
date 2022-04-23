@@ -55,7 +55,7 @@ class _OverviewPageState extends State<OverviewPage> {
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
+                const Text(
                   "Are you feeling sick?",
                   style: TextStyle(
                       color: Colors.white,
@@ -65,7 +65,7 @@ class _OverviewPageState extends State<OverviewPage> {
                 SizedBox(
                   height: screenHeight * 0.01,
                 ),
-                Text(
+                const Text(
                   "If you have any COVID-19 symptoms, please call or text us immediately",
                   style: TextStyle(
                       color: Colors.white70,
@@ -79,11 +79,11 @@ class _OverviewPageState extends State<OverviewPage> {
                   children: [
                     TextButton.icon(
                         onPressed: () {},
-                        icon: Icon(
+                        icon: const Icon(
                           Icons.phone,
                           color: Colors.white,
                         ),
-                        label: Text(
+                        label: const Text(
                           'Call Now',
                           style: TextStyle(
                               fontSize: 16.0, fontWeight: FontWeight.w600),
