@@ -76,8 +76,19 @@ class _OverviewPageState extends State<OverviewPage> {
                   height: screenHeight * 0.03,
                 ),
                 Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     TextButton.icon(
+                      style: ButtonStyle(
+                          padding:
+                              MaterialStateProperty.all<EdgeInsetsGeometry>(
+                                  const EdgeInsets.symmetric(
+                                      vertical: 10.0, horizontal: 20.0)),
+                          backgroundColor:
+                              MaterialStateProperty.all<Color>(Colors.red),
+                          shape: MaterialStateProperty.all<OutlinedBorder>(
+                              RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(30.0)))),
                       onPressed: () {},
                       icon: const Icon(
                         Icons.phone,
@@ -86,7 +97,33 @@ class _OverviewPageState extends State<OverviewPage> {
                       label: const Text(
                         'Call Now',
                         style: TextStyle(
-                            fontSize: 16.0, fontWeight: FontWeight.w600),
+                            color: Colors.white,
+                            fontSize: 16.0,
+                            fontWeight: FontWeight.w600),
+                      ),
+                    ),
+                    TextButton.icon(
+                      style: ButtonStyle(
+                          padding:
+                              MaterialStateProperty.all<EdgeInsetsGeometry>(
+                                  const EdgeInsets.symmetric(
+                                      vertical: 10.0, horizontal: 20.0)),
+                          backgroundColor:
+                              MaterialStateProperty.all<Color>(Colors.greenAccent),
+                          shape: MaterialStateProperty.all<OutlinedBorder>(
+                              RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(30.0)))),
+                      onPressed: () {},
+                      icon: const Icon(
+                        Icons.chat_bubble,
+                        color: Colors.white,
+                      ),
+                      label: const Text(
+                        'Send SMS',
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 16.0,
+                            fontWeight: FontWeight.w600),
                       ),
                     )
                   ],
