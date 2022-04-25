@@ -142,7 +142,36 @@ class _OverviewPageState extends State<OverviewPage> {
         height: 300,
         width: double.infinity,
         decoration: BoxDecoration(
-          color: Colors.green
+            color: Colors.green.withOpacity(0.03),
+            borderRadius: const BorderRadius.only(
+                bottomLeft: Radius.circular(50),
+                bottomRight: Radius.circular(50))),
+        child: Wrap(
+          children: [
+            Container(
+              decoration: BoxDecoration(
+                  color: Colors.white, borderRadius: BorderRadius.circular(8)),
+              child: Column(
+                children: [
+                  Row(
+                    children: [
+                      Container(
+                        alignment: Alignment.center,
+                        height: 30,
+                        width: 30,
+                        decoration: BoxDecoration(
+                            color: const Color(0xFFFF9C00).withOpacity(0.12),
+                            shape: BoxShape.circle,
+                            ),
+                            child: SvgP,
+
+                      )
+                    ],
+                  )
+                ],
+              ),
+            )
+          ],
         ),
       ),
     );
