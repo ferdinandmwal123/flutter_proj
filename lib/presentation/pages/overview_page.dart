@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 import 'overview/widgets/country_dropdown.dart';
+import 'overview/widgets/info_card.dart';
+import 'overview/widgets/line_report_chart.dart';
 
 class OverviewPage extends StatefulWidget {
   const OverviewPage({Key? key}) : super(key: key);
@@ -147,29 +150,32 @@ class _OverviewPageState extends State<OverviewPage> {
                 bottomLeft: Radius.circular(50),
                 bottomRight: Radius.circular(50))),
         child: Wrap(
+          runSpacing: 20,
+          spacing: 20,
           children: [
-            Container(
-              decoration: BoxDecoration(
-                  color: Colors.white, borderRadius: BorderRadius.circular(8)),
-              child: Column(
-                children: [
-                  Row(
-                    children: [
-                      Container(
-                        alignment: Alignment.center,
-                        height: 30,
-                        width: 30,
-                        decoration: BoxDecoration(
-                            color: const Color(0xFFFF9C00).withOpacity(0.12),
-                            shape: BoxShape.circle,
-                            ),
-                            child: SvgP,
-
-                      )
-                    ],
-                  )
-                ],
-              ),
+            InfoCard(
+              title: "Confirmed cases",
+              context: context,
+              iconColor: const Color(0xFFFF9C00),
+              effected: 1062,
+            ),
+             InfoCard(
+              title: "Total Deaths",
+              context: context,
+              iconColor: const Color(0xFFFF2D55),
+              effected: 75,
+            ),
+             InfoCard(
+              title: "Total Recovered",
+              context: context,
+              iconColor: const Color(0xFF50E3C2),
+              effected: 589 ,
+            ),
+             InfoCard(
+              title: "New Cases",
+              context: context,
+              iconColor: const Color(0xFF58556D),
+              effected: 75,
             )
           ],
         ),

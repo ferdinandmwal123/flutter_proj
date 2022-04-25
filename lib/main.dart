@@ -19,4 +19,3 @@ void main()  async{
 // }
 
 //TODO(02) : Add Flutter Native splash
-//TODO(Current): Fix assets
