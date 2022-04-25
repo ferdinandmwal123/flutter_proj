@@ -42,6 +42,7 @@ class InfoCard extends StatelessWidget {
                       "assets/icons/running.svg",
                       height: 12,
                       width: 12,
+                      color: iconColor,
                     ),
                   ),
                   const SizedBox(
