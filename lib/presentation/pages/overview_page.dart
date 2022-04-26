@@ -142,7 +142,7 @@ class _OverviewPageState extends State<OverviewPage> {
   SliverToBoxAdapter _buildCounter(double screenHeight) {
     return SliverToBoxAdapter(
       child: Container(
-        height: 300,
+        padding: const EdgeInsets.all(20),
         width: double.infinity,
         decoration: BoxDecoration(
             color: Colors.green.withOpacity(0.03),
