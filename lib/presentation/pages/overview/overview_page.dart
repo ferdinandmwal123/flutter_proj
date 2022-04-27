@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-import 'overview/widgets/country_dropdown.dart';
-import 'overview/widgets/info_card.dart';
-import 'overview/widgets/line_report_chart.dart';
+import 'widgets/country_dropdown.dart';
+import 'widgets/info_card.dart';
+import 'widgets/line_report_chart.dart';
 
 class OverviewPage extends StatefulWidget {
   const OverviewPage({Key? key}) : super(key: key);
