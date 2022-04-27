@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 import 'overview/widgets/country_dropdown.dart';
+import 'overview/widgets/info_card.dart';
+import 'overview/widgets/line_report_chart.dart';
 
 class OverviewPage extends StatefulWidget {
   const OverviewPage({Key? key}) : super(key: key);
@@ -139,10 +142,42 @@ class _OverviewPageState extends State<OverviewPage> {
   SliverToBoxAdapter _buildCounter(double screenHeight) {
     return SliverToBoxAdapter(
       child: Container(
-        height: 300,
+        padding: const EdgeInsets.all(20),
         width: double.infinity,
         decoration: BoxDecoration(
-          color: Colors.green
+            color: Colors.green.withOpacity(0.03),
+            borderRadius: const BorderRadius.only(
+                bottomLeft: Radius.circular(50),
+                bottomRight: Radius.circular(50))),
+        child: Wrap(
+          runSpacing: 20,
+          spacing: 20,
+          children: [
+            InfoCard(
+              title: "Confirmed cases",
+              context: context,
+              iconColor: const Color(0xFFFF9C00),
+              effected: 1062,
+            ),
+             InfoCard(
+              title: "Total Deaths",
+              context: context,
+              iconColor: const Color(0xFFFF2D55),
+              effected: 75,
+            ),
+             InfoCard(
+              title: "Total Recovered",
+              context: context,
+              iconColor: const Color(0xFF50E3C2),
+              effected: 589 ,
+            ),
+             InfoCard(
+              title: "New Cases",
+              context: context,
+              iconColor: const Color(0xFF58556D),
+              effected: 75,
+            )
+          ],
         ),
       ),
     );
