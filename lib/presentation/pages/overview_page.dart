@@ -19,7 +19,7 @@ class _OverviewPageState extends State<OverviewPage> {
     final screenHeight = MediaQuery.of(context).size.height;
     return CustomScrollView(
       physics: const ClampingScrollPhysics(),
-      slivers: [_buildHeader(screenHeight), _buildCounter(screenHeight)],
+      slivers: [_buildHeader(screenHeight), _buildCounter(screenHeight), _buildMap(screenHeight)],
     );
   }
 
@@ -159,19 +159,19 @@ class _OverviewPageState extends State<OverviewPage> {
               iconColor: const Color(0xFFFF9C00),
               effected: 1062,
             ),
-             InfoCard(
+            InfoCard(
               title: "Total Deaths",
               context: context,
               iconColor: const Color(0xFFFF2D55),
               effected: 75,
             ),
-             InfoCard(
+            InfoCard(
               title: "Total Recovered",
               context: context,
               iconColor: const Color(0xFF50E3C2),
-              effected: 589 ,
+              effected: 589,
             ),
-             InfoCard(
+            InfoCard(
               title: "New Cases",
               context: context,
               iconColor: const Color(0xFF58556D),
@@ -181,5 +181,39 @@ class _OverviewPageState extends State<OverviewPage> {
         ),
       ),
     );
+  }
+
+  SliverToBoxAdapter _buildMap(double screenHeight) {
+    return SliverToBoxAdapter(
+        child: Container(
+      padding: const EdgeInsets.all(20),
+      decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(20),
+          boxShadow: [
+            BoxShadow(
+                offset: const Offset(0, 21),
+                blurRadius: 54,
+                color: Colors.black.withOpacity(0.05))
+          ]),
+      child: Column(
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              const Text(
+                "Global Map",
+                style: TextStyle(fontSize: 15),
+              ),
+              SvgPicture.asset("assets/icons/more.svg"),
+            ],
+          ),
+          const SizedBox(
+            height: 10,
+          ),
+         Image.asset("assets/images/map.jpg"),
+        ],
+      ),
+    ));
   }
 }
