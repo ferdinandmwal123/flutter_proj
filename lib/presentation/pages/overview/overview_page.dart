@@ -5,6 +5,8 @@ import 'widgets/country_dropdown.dart';
 import 'widgets/info_card.dart';
 import 'widgets/line_report_chart.dart';
 
+//TODO(03): Reduce size of everything for image
+
 class OverviewPage extends StatefulWidget {
   const OverviewPage({Key? key}) : super(key: key);
 
