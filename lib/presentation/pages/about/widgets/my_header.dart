@@ -55,14 +55,15 @@ class MyHeader extends StatelessWidget {
                                 fontSize: 22, fontWeight: FontWeight.w200)
                             .copyWith(color: Colors.white)),
                   ),
-                  Positioned(
-                    child: Text("COVID-19 \nChina \n3/12/2019",
-                        style: const TextStyle(
-                                fontSize: 22, fontWeight: FontWeight.w900)
-                            .copyWith(color: Colors.white)),
-                    top: 20,
-                    left: 240,
-                  ),
+                  // Positioned(
+                  //   child: Text("COVID-19 \nChina \n3/12/2019",
+                  //       style: const TextStyle(
+                  //               fontSize: 22, fontWeight: FontWeight.w900)
+                  //           .copyWith(color: Colors.white)),
+                  //   top: 20,
+                  //   left: 240,
+                  // ),
+                  Text("data")
                 ],
               ),
             )
