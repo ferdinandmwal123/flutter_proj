@@ -20,7 +20,7 @@ class HomePage extends StatelessWidget {
         return SalomonBottomBar(
           margin: const EdgeInsets.symmetric(
             horizontal: 20,
-            vertical: 40,
+            vertical: 10,
           ),
           currentIndex: tabsRouter.activeIndex,
           onTap: tabsRouter.setActiveIndex,
@@ -29,7 +29,7 @@ class HomePage extends StatelessWidget {
               selectedColor: Colors.amberAccent,
               icon: const Icon(
                 Icons.home,
-                size: 30,
+                size: 20,
               ),
               title: const Text('Home'),
             ),
@@ -37,7 +37,7 @@ class HomePage extends StatelessWidget {
               selectedColor: Colors.blue[200],
               icon: const Icon(
                 Icons.info,
-                size: 30,
+                size: 20,
               ),
               title: const Text('About'),
             ),
@@ -45,7 +45,7 @@ class HomePage extends StatelessWidget {
               selectedColor: Colors.pinkAccent[100],
               icon: const Icon(
                 Icons.close,
-                size: 30,
+                size: 20,
               ),
               title: const Text('Prevent'),
             ),

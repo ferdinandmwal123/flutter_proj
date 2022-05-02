@@ -1,8 +1,8 @@
 import 'package:auto_route/annotations.dart';
 import 'package:auto_route/auto_route.dart';
-import 'package:flutter_project/presentation/pages/about_page.dart';
-import 'package:flutter_project/presentation/pages/overview/home_page.dart';
-import 'package:flutter_project/presentation/pages/overview_page.dart';
+import 'package:flutter_project/presentation/pages/about/about_page.dart';
+import 'package:flutter_project/presentation/pages/home_page.dart';
+import 'package:flutter_project/presentation/pages/overview/overview_page.dart';
 import 'package:flutter_project/presentation/pages/prevent_page.dart';
 
 @MaterialAutoRouter(
