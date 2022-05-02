@@ -11,8 +11,8 @@ class AboutPage extends StatelessWidget {
       children: const [
          MyHeader(
           image: "assets/icons/coronadr.svg",
-          textTop: "Avoid crowds",
-          textBottom: "stay at home.",
+          textTop: "Name:",
+          textBottom: "Origin:",
         )
       ],
     );

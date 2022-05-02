@@ -26,7 +26,7 @@ class MyHeader extends StatelessWidget {
             end: Alignment.bottomLeft,
             colors: [
               Color(0xFF473F97),
-              Color(0xFF473F97) ,
+              Color(0xFF473F97),
             ],
           ),
           image: DecorationImage(
@@ -48,10 +48,10 @@ class MyHeader extends StatelessWidget {
                   ),
                   Positioned(
                     top: 20,
-                    left: 150,
+                    left: 165,
                     child: Text("$textTop \n$textBottom",
                         style: const TextStyle(
-                                fontSize: 22, fontWeight: FontWeight.w600)
+                                fontSize: 22, fontWeight: FontWeight.w900)
                             .copyWith(color: Colors.white)),
                   ),
                   Container()
