@@ -32,7 +32,9 @@ class PreventPage extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-
+                      Column(
+                        children: [],
+                      )
                 ],
               )
             ],
