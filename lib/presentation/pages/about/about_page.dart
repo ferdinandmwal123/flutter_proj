@@ -51,7 +51,7 @@ class AboutPage extends StatelessWidget {
                     )
                   ],
                 ),
-                SizedBox(height: 20,),
+                const SizedBox(height: 20,),
                  const Text( 
                   'Cell Structure',
                   style: TextStyle(
