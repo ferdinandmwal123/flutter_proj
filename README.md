@@ -84,9 +84,11 @@
 
 
 <img src="assets/screenrecording.gif"  />
-<img src = "assets/screenshot2.png" />
-<img src = "assets/screenshot1.png" />
-<img src = "assets/screenshot3.png" />
+<img src = "assets/screenshot2.png" height="1100" width="500"/>
+<img src = "assets/screenshot1.png" height="1100" width="500"/>
+<img src = "assets/screenshot3.png" height="1100" width="500"/>
+
+
 
 My goal with this project was to combine everything I have learned to build a fully functional, realistic and scalable Flutter app.
 
