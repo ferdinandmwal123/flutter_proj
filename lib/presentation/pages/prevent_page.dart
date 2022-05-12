@@ -32,18 +32,18 @@ class PreventPage extends StatelessWidget {
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Column(
-                    children: [
-                      SvgPicture.asset("assets/icons/hand_wash.svg"),
-                      Text(
-                        "Wash Hands",
-                        style: Theme.of(context)
-                            .textTheme
-                            .bodyText2
-                            // .copyWith(color: const Color(0xFF0D8E53)),
-                      )
-                    ],
+                children: const [
+                  PreventionCard(
+                    svgSrc: "assets/icons/hand_wash.svg",
+                    title: "Wash Hands",
+                  ),
+                  PreventionCard(
+                    svgSrc: "assets/icons/use_mask.svg",
+                    title: "Wear a mask",
+                  ),
+                  PreventionCard(
+                    svgSrc: "assets/icons/clean_disinfect.svg",
+                    title: "Disinfect",
                   )
                 ],
               )
@@ -51,6 +51,29 @@ class PreventPage extends StatelessWidget {
           ),
         )
       ]),
+    );
+  }
+}
+
+class PreventionCard extends StatelessWidget {
+  final String svgSrc;
+  final String title;
+  const PreventionCard({
+    Key? key,
+    required this.svgSrc,
+    required this.title,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        SvgPicture.asset(svgSrc),
+        Text(title, style: Theme.of(context).textTheme.bodyText2
+            // .copyWith(color: const Color(0xFF0D8E53)),
+            )
+      ],
     );
   }
 }
