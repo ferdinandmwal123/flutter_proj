@@ -12,7 +12,7 @@ class AboutPage extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-        const MyHeader(
+        const AboutHeader(
           image: "assets/icons/coronadr.svg",
           textTop: "Name:",
           textBottom: "Origin:",
@@ -51,7 +51,7 @@ class AboutPage extends StatelessWidget {
                     )
                   ],
                 ),
-                SizedBox(height: 20,),
+                const SizedBox(height: 20,),
                  const Text( 
                   'Cell Structure',
                   style: TextStyle(
