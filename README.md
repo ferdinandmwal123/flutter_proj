@@ -36,7 +36,7 @@
   <h3 align="center">Flutter Project</h3>
 
   <p align="center">
-    Covid app with an awesom UI
+    Covid app with an awesome UI
     <br />
     <!-- <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a> -->
     <br />
@@ -266,5 +266,5 @@ Resources used to develop this project
 [license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
 [license-url]: https://github.com/ferdinandmwal123/flutter_proj/blob/main/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: 
-[product-screenshot]: assets/screenrecording.gif
+[linkedin-url]: https://www.linkedin.com/in/ferdinand-mwalagho-091436198/
+
