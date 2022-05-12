@@ -122,6 +122,16 @@ class PreventHeader extends StatelessWidget {
                     fit: BoxFit.fitWidth,
                     alignment: Alignment.topCenter,
                   ),
+                  Positioned(
+                    top: 20,
+                    left: 165,
+                    child: Text("$textTop   \n$textBottom ",
+                        overflow: TextOverflow.ellipsis,
+                        style: const TextStyle(
+                            color: Colors.white,
+                            fontSize: 22.0,
+                            fontWeight: FontWeight.w600)),
+                  ),
 
                   //! UI WARNING: Do not remove this empty container or die!!!!!!
                   Container(),
