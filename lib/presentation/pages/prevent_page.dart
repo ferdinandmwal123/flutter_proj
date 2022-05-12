@@ -11,7 +11,7 @@ class PreventPage extends StatelessWidget {
       child: Column(mainAxisAlignment: MainAxisAlignment.start, children: [
         const PreventHeader(
           image: "assets/icons/Drcorona.svg",
-          textTop: "All you need",
+          textTop: "All you need to do",
           textBottom: "is to stay  home",
         ),
         Padding(

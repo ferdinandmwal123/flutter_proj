@@ -55,7 +55,7 @@ class AboutHeader extends StatelessWidget {
                         overflow: TextOverflow.ellipsis,
                         style: const TextStyle(
                                 fontSize: 22, fontWeight: FontWeight.w200)
-                            .copyWith(color: Colors.white)),
+                            .copyWith(color: Colors.white70)),
                   ),
                   Positioned(
                     child: Text("COVID-19 \nChina \n30/2/2019",
