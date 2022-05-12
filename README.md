@@ -117,32 +117,32 @@ Frameworks, libraries and dependencies for this project
 <!-- GETTING STARTED -->
 ## Getting Started
 
-Instructions on how to get started with the app
+Instructions on how to build the app
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
+* [setup Android](https://developer.android.com/studio)
+
+* [Dart](https://dart.dev/)
+
+* [Flutter](https://flutter.dev/)
+
 
 ### Installation
 
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
+_How to install the app._
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+1. Clone the repo
    ```sh
    git clone https://github.com/your_username_/Project-Name.git
    ```
-3. Install NPM packages
-   ```sh
-   npm install
+2. Install Flutter dependencies (Pre-installed in `pubspec.yaml`)
+   ```dart
+   flutter pub get
    ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
+3. Generate dpendency class
+   ```dart
+   flutter pub run build_runner build --delete-conflicting-outputs
    ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -152,9 +152,16 @@ _Below is an example of how you can instruct your audience on installing and set
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
+Project can be used as a reference for building scalable apps and real-world apps.
+App features:
+ * Retrieves data from an API
+ * Null-safety 
+ * Proper implementation of dependency injection
+ * Domain-Driven-Design Architecture
+ * Flutter Bloc State management
+ * Data Transfer Objects
+ * Navigation and routing
+  
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -163,15 +170,19 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 <!-- ROADMAP -->
 ## Roadmap
 
-- [x] Add Changelog
-- [x] Add back to top links
-- [ ] Add Additional Templates w/ Examples
-- [ ] Add "components" document to easily copy & paste sections of the readme
+- [x] Project structure setup
+- [x] Infrastructure layer (API)
+- [x] Domain layer (Models and reposiory facade)
+- [x] Application layer (Implement state management (Bloc))
+- [x] Presentation layer (setup UI)
+- [ ] Link application layer to domain
+- [ ] Render dynamic chart content
+- [x] Documentation
 - [ ] Multi-language Support
     - [ ] Chinese
     - [ ] Spanish
 
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/ferdinandmwal123/flutter_proj/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -207,9 +218,9 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
+<!-- Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com -->
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+Project Link: [https://github.com/ferdinandmwal123/flutter_proj](https://github.com/ferdinandmwal123/flutter_proj)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -218,16 +229,23 @@ Project Link: [https://github.com/your_username/repo_name](https://github.com/yo
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
+Resources used to develop this project
 
-* [Choose an Open Source License](https://choosealicense.com)
-* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-* [Malven's Flexbox Cheatsheet](https://flexbox.malven.co/)
-* [Malven's Grid Cheatsheet](https://grid.malven.co/)
-* [Img Shields](https://shields.io)
-* [GitHub Pages](https://pages.github.com)
-* [Font Awesome](https://fontawesome.com)
+* [Flutter Bloc Tutorial for Beginner (Video)](https://www.youtube.com/watch?v=Ep6R7U9wa0U)
+* [Flutter Firebase & DDD  (Video)](https://www.youtube.com/watch?v=KfuUkq2cLZU&list=PLB6lc7nQ1n4iS5p-IezFFgqP6YvAJy84U&index=10)
+* [Flutter Native Splash (Video)](https://www.youtube.com/watch?v=dB0dOnc2k10)
+* [Dartz Using Either (Article)](https://halesworth.org/dartz-using-either/)
+* [Using freezed with Bloc (Article)](https://poetryincode.dev/dash-tips-using-freezed-with-bloc)
+* [Flutter - bloc with freezed (Article)](https://www.codementor.io/@sunilmishra/flutter-bloc-with-freezed-16cjssmd9i)
+* [Flutter Bloc (v8.0.1) Pattern to load API data with Freezed and AutoRoute (Article)](https://medium.com/@CodingWithImran/flutter-bloc-v8-0-1-pattern-to-load-api-data-with-freezed-and-autoroute-ab88a27ce273)
 * [React Icons](https://react-icons.github.io/react-icons/search)
+* [API used](https://api.covid19api.com/summary)
+* [Networking in Flutter using Dio (Article)](https://blog.logrocket.com/networking-flutter-using-dio/)
+* [Data Modeling with Flutter using freezed package (Article)](https://dev.to/carlomigueldy/data-modeling-with-flutter-using-freezed-package-4p69)
+* [News app (Repository)](https://github.com/LoaiZewail/news-app)
+* [Covid 19 App Flutter UI (Video)](https://www.youtube.com/watch?v=zx6uMCoW2gQ)
+* [Flutter Covid 19 Dashboard UI (Video)](https://www.youtube.com/watch?v=krU-ASLb8lM)
+* [Covid 19 App- Flutter UI (Video)](https://www.youtube.com/watch?v=axWBN1aotQk)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
