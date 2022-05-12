@@ -248,6 +248,7 @@ Resources used to develop this project
 * [Covid 19 App Flutter UI (Video)](https://www.youtube.com/watch?v=zx6uMCoW2gQ)
 * [Flutter Covid 19 Dashboard UI (Video)](https://www.youtube.com/watch?v=krU-ASLb8lM)
 * [Covid 19 App- Flutter UI (Video)](https://www.youtube.com/watch?v=axWBN1aotQk)
+* [Shields IO](https://shields.io/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
