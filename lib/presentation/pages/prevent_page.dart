@@ -54,14 +54,13 @@ class PreventPage extends StatelessWidget {
               Container(
                 margin: const EdgeInsets.symmetric(
                   vertical: 10,
-                  horizontal: 10,
+                 
                 ),
                 padding: const EdgeInsets.all(10.0),
-                color: Colors.orange,
                 height: screenHeight * 0.15,
                 decoration: BoxDecoration(
                     gradient: const LinearGradient(
-                        colors: [ Color(0xFFAD9FE4), const Color(0xFF473F97)]),
+                        colors: [Color(0xFFAD9FE4), const Color(0xFF473F97)]),
                     borderRadius: BorderRadius.circular(20.0)),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -92,7 +91,8 @@ class PreventPage extends StatelessWidget {
                     )
                   ],
                 ),
-              )
+              ),
+              buildHelpCard(context)
             ],
           ),
         )
@@ -126,3 +126,62 @@ class PreventionCard extends StatelessWidget {
     );
   }
 }
+
+  Container buildHelpCard(BuildContext context) {
+    return Container(
+      height: 150,
+      width: double.infinity,
+      child: Stack(
+        alignment: Alignment.bottomLeft,
+        children: <Widget>[
+          Container(
+            padding: EdgeInsets.only(
+              // left side padding is 40% of total width
+              left: MediaQuery.of(context).size.width * .4,
+              top: 20,
+              right: 20,
+            ),
+            height: 130,
+            width: double.infinity,
+            decoration: BoxDecoration(
+              gradient: const LinearGradient(
+                colors: [
+                  Color(0xFF60BE93),
+                  Color(0xFF1B8D59),
+                ],
+              ),
+              borderRadius: BorderRadius.circular(20),
+            ),
+            child: RichText(
+              text: TextSpan(
+                children: [
+                  TextSpan(
+                    text: "Dial 999 for \nMedical Help!\n",
+                    style: Theme.of(context)
+                        .textTheme
+                        .headline6!
+                        .copyWith(color: Colors.white),
+                  ),
+                  TextSpan(
+                    text: "If any symptoms appear",
+                    style: TextStyle(
+                      color: Colors.white.withOpacity(0.7),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 15),
+            child: SvgPicture.asset("assets/icons/nurse.svg"),
+          ),
+          Positioned(
+            top: 30,
+            right: 10,
+            child: SvgPicture.asset("assets/icons/virus.svg"),
+          ),
+        ],
+      ),
+    );
+  }
