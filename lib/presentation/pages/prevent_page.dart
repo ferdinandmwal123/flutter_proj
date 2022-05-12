@@ -60,13 +60,36 @@ class PreventPage extends StatelessWidget {
                 color: Colors.orange,
                 height: screenHeight * 0.15,
                 decoration: BoxDecoration(
-                    gradient: LinearGradient(
-                        colors: [Color(0xFFAD9FE4), Color(0xFF473F97)]),
+                    gradient: const LinearGradient(
+                        colors: [ Color(0xFFAD9FE4), const Color(0xFF473F97)]),
                     borderRadius: BorderRadius.circular(20.0)),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
-                    Image.asset('assets/images/own_test.png')
+                    Image.asset('assets/images/own_test.png'),
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const Text(
+                          'Do your own test!',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 18.0,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        SizedBox(height: screenHeight * 0.01),
+                        const Text(
+                          'Follow the instructions\nto do your own test.',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 16.0,
+                          ),
+                          maxLines: 2,
+                        ),
+                      ],
+                    )
                   ],
                 ),
               )
