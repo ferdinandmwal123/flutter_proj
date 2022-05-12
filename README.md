@@ -260,7 +260,7 @@ Resources used to develop this project
 [contributors-url]: https://github.com/ferdinandmwal123/flutter_proj/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/ferdinandmwal123/flutter_proj?style=social
 [forks-url]: https://github.com/ferdinandmwal123/flutter_proj/network/members
-[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
+[stars-shield]: https://img.shields.io/github/stars/ferdinandmwal123/flutter_proj?style=social
 [stars-url]: https://github.com/ferdinandmwal123/flutter_proj/stargazers
 [issues-shield]: https://img.shields.io/github/issues/ferdinandmwal123/flutter_proj
 [issues-url]: https://github.com/ferdinandmwal123/flutter_proj/issues
