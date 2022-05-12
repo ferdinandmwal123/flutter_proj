@@ -255,15 +255,15 @@ Resources used to develop this project
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
+[contributors-shield]: https://img.shields.io/github/contributors/ferdinandmwal123/flutter_proj
 [contributors-url]: https://github.com/ferdinandmwal123/flutter_proj/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
+[forks-shield]: https://img.shields.io/github/forks/ferdinandmwal123/flutter_proj?style=social
 [forks-url]: https://github.com/ferdinandmwal123/flutter_proj/network/members
 [stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
 [stars-url]: https://github.com/ferdinandmwal123/flutter_proj/stargazers
-[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
+[issues-shield]: https://img.shields.io/github/issues/ferdinandmwal123/flutter_proj
 [issues-url]: https://github.com/ferdinandmwal123/flutter_proj/issues
-[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
+[license-shield]: https://img.shields.io/github/license/ferdinandmwal123/flutter_proj
 [license-url]: https://github.com/ferdinandmwal123/flutter_proj/blob/main/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/ferdinand-mwalagho-091436198/
