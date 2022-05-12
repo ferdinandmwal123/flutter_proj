@@ -9,7 +9,7 @@ class PreventPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: Column(mainAxisAlignment: MainAxisAlignment.start, children: [
-        const AboutHeader(
+        const PreventHeader(
           image: "assets/icons/Drcorona.svg",
           textTop: "All you need",
           textBottom: "is to stay  home",
