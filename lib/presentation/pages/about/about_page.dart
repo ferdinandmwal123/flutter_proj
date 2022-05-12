@@ -12,7 +12,7 @@ class AboutPage extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-        const MyHeader(
+        const AboutHeader(
           image: "assets/icons/coronadr.svg",
           textTop: "Name:",
           textBottom: "Origin:",

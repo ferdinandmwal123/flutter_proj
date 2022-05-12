@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class MyHeader extends StatelessWidget {
+class AboutHeader extends StatelessWidget {
   final String? image;
   final String? textTop;
   final String? textBottom;
-  const MyHeader({
+  const AboutHeader({
     Key? key,
     this.image,
     this.textTop,
