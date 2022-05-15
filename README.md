@@ -245,9 +245,6 @@ Resources used to develop this project
 * [Networking in Flutter using Dio (Article)](https://blog.logrocket.com/networking-flutter-using-dio/)
 * [Data Modeling with Flutter using freezed package (Article)](https://dev.to/carlomigueldy/data-modeling-with-flutter-using-freezed-package-4p69)
 * [News app (Repository)](https://github.com/LoaiZewail/news-app)
-* [Covid 19 App Flutter UI (Video)](https://www.youtube.com/watch?v=zx6uMCoW2gQ)
-* [Flutter Covid 19 Dashboard UI (Video)](https://www.youtube.com/watch?v=krU-ASLb8lM)
-* [Covid 19 App- Flutter UI (Video)](https://www.youtube.com/watch?v=axWBN1aotQk)
 * [Shields IO](https://shields.io/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
